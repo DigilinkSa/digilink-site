@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiLink | Industrial Consulting & SIRI Assessment</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- 1. BRANDING & COLORS --- */
+        :root {
+            --brand-green: #3A7D42; 
+            --brand-dark: #1B2428;  
+            --brand-light: #F4F6F8; 
+            --white: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #444;
+            line-height: 1.6;
+            background-color: var(--white);
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; 
+            color: var(--brand-dark);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- 2. ANIMATIONS --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate3d(0, 40px, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+
+        .animate-on-scroll { opacity: 0; }
+        .is-visible { animation: fadeInUp 0.8s ease-out forwards; }
+
+        /* --- 3. HEADER & LOGO --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav { display: flex; justify-content: space-between; align-items: center; }
+
+        .brand-logo img {
+            height: 70px; 
+            width: auto;
+            display: block;
+        }
+
+        .nav-menu { display: flex; gap: 25px; list-style: none; }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--brand-dark);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: var(--brand-green); }
+
+        .btn-nav {
+            background: var(--brand-dark);
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 4px;
+        }
+        .btn-nav:hover { background: var(--brand-green); }
+
+        /* --- 4. HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(17, 24, 30, 0.7), rgba(17, 24, 30, 0.6)), url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out; 
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .hero-text { max-width: 800px; }
+        .hero-text h1 { color: white; font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; }
+        .hero-text p { font-size: 1.3rem; margin-bottom: 40px; color: #E0E0E0; font-weight: 400; }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--brand-green);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(58, 125, 66, 0.4);
+        }
+        .btn-primary:hover { background: #2e6634; transform: translateY(-3px); }
+
+        /* --- 5. PARTNERS --- */
+        .partners { padding: 50px 0; background: #fff; text-align: center; }
+        .partners p { font-size: 0.85rem; color: #999; margin-bottom: 30px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .logo-grid { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; }
+        .partner-img { height: 40px; max-width: 150px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all 0.4s ease; }
+        .partner-img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+
+        /* --- 6. ABOUT --- */
+        .about-section { padding: 100px 0; background: var(--brand-light); }
+        .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        .vision-box { background: white; padding: 30px; border-left: 6px solid var(--brand-green); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 20px; transition: transform 0.3s; }
+        .vision-box:hover { transform: translateX(10px); }
+        .vision-box h3 { color: var(--brand-green); font-size: 1.1rem; margin-bottom: 10px; }
+        .vision-box p { font-size: 0.95rem; margin: 0; color: #555; }
+
+        /* --- 7. WHY DIGILINK --- */
+        .why-digilink { padding: 100px 0; background: var(--white); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+        .feature-card { padding: 30px; border: 1px solid #eee; border-radius: 8px; transition: 0.3s; position: relative; overflow: hidden; }
+        .feature-card:hover { border-color: var(--brand-green); box-shadow: 0 10px 40px rgba(0,0,0,0.08); transform: translateY(-5px); }
+        .feature-icon { font-size: 2.5rem; color: var(--brand-green); margin-bottom: 20px; }
+
+        /* --- 8. SERVICES --- */
+        .services { padding: 100px 0; background: #1a1a1a; color: white; }
+        .services h2 { color: white; text-align: center; margin-bottom: 60px; }
+        .service-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .service-item { background: rgba(255,255,255,0.05); padding: 40px; border-bottom: 3px solid transparent; transition: 0.3s; display: flex; gap: 20px; align-items: flex-start; }
+        .service-item:hover { background: rgba(255,255,255,0.1); border-bottom-color: var(--brand-green); }
+        .service-graphic { font-size: 2.5rem; color: var(--brand-green); flex-shrink: 0; background: rgba(255,255,255,0.1); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+        .service-content h3 { color: white; font-size: 1.3rem; margin-top: 0; }
+        .service-content ul { padding-left: 20px; margin-top: 15px; color: #bbb; font-size: 0.9rem; }
+        .service-content li { margin-bottom: 5px; }
+
+        /* --- 9. SECTORS --- */
+        .sectors { padding: 80px 0; background: var(--brand-green); text-align: center; color: white; }
+        .sectors h4 { color: white; margin-bottom: 40px; font-size: 2rem; }
+        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .sector-card { background: rgba(255,255,255,0.1); padding: 25px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
+        .sector-card:hover { background: rgba(255,255,255,0.25); transform: translateY(-5px); }
+        .sector-icon { font-size: 2rem; margin-bottom: 15px; display: block; opacity: 0.9; }
+        .sector-name { font-weight: 600; font-size: 0.95rem; }
+
+        /* --- 10. APPROACH (Updated for Lists) --- */
+        .approach { padding: 100px 0; background: var(--white); text-align: center; }
+        .process-steps { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            margin-top: 60px; 
+            position: relative; 
+            align-items: start;
+        }
+        .process-steps::before {
+            content:''; position: absolute; top: 25px; left: 10%; right: 10%; height: 2px; background: #eee; z-index: 1;
+        }
+        .step { position: relative; z-index: 2; padding: 0 10px; text-align: left; }
+        .step-header { text-align: center; margin-bottom: 15px; }
+        .step-icon {
+            width: 50px; height: 50px; background: var(--brand-dark); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 15px; font-weight: bold; border: 5px solid white; transition: 0.3s;
+        }
+        .step:hover .step-icon { background: var(--brand-green); transform: scale(1.1); }
+        .step h4 { font-size: 1.1rem; margin-bottom: 15px; text-align: center; }
+        .step ul { 
+            list-style: none; 
+            padding: 0; 
+            font-size: 0.85rem; 
+            color: #666; 
+            border-top: 2px solid #f0f0f0;
+            padding-top: 15px;
+        }
+        .step ul li { 
+            position: relative; 
+            padding-left: 15px; 
+            margin-bottom: 8px; 
+            line-height: 1.4;
+        }
+        .step ul li::before {
+            content: "•";
+            color: var(--brand-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* --- 11. VISION 2030 --- */
+        .v2030 { padding: 80px 0; background: #f8f9fa; border-top: 1px solid #eee; }
+        .v2030-layout { display: flex; align-items: center; gap: 60px; }
+        .v2030-img { width: 220px; height: auto; display: block; mix-blend-mode: multiply; }
+        .v2030-list { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .v2030-list li { font-size: 0.95rem; color: #555; display: flex; align-items: start; gap: 10px; }
+        .v2030-list li i { color: var(--brand-green); margin-top: 5px; }
+
+        /* --- 12. CONTACT FORM --- */
+        .contact { display: grid; grid-template-columns: 1fr 1.5fr; }
+        .contact-info { background: var(--brand-dark); color: white; padding: 80px; }
+        .contact-form { background: white; padding: 80px; }
+        
+        .form-field { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; background: #f9f9f9; }
+        .form-field:focus { outline: none; border-color: var(--brand-green); background: white; }
+        
+        footer { background: #111; color: #666; padding: 30px; text-align: center; font-size: 13px; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .split-layout, .feature-grid, .service-container, .contact, .v2030-layout { display: block; }
+            .process-steps { grid-template-columns: 1fr; gap: 40px; }
+            .process-steps::before { display: none; }
+            .step { text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .step ul { text-align: left; display: inline-block; }
+            
+            .hero-text h1 { font-size: 2.5rem; }
+            .nav-menu { display: none; }
+            .partner-img { margin-bottom: 20px; margin-right: 20px; }
+            .contact-info, .contact-form { padding: 40px 20px; }
+            .sector-grid { grid-template-columns: repeat(2, 1fr); }
+            .v2030-img { margin-top: 30px; width: 150px; }
+            .v2030-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="brand-logo">
+                    <img src="logo.jpg" alt="DigiLink Logo">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#why">Why DigiLink</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#sectors">Sectors</a></li>
+                    <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-text animate-on-scroll">
+            <h1>TRANSFORMATION <br>WITH REAL IMPACT</h1>
+            <p>Enabling Saudi factories to achieve world-class digital maturity and operational excellence through data-driven consulting.</p>
+            <a href="#contact" class="btn-primary">Book SIRI Assessment</a>
+        </div>
+    </section>
+
+    <div class="partners animate-on-scroll">
+        <div class="container">
+            <p>Supported Technology Ecosystems</p>
+            <div class="logo-grid">
+                <img src="odoo.png" alt="Odoo" class="partner-img">
+                <img src="Sap.png" alt="SAP" class="partner-img">
+                <img src="Dynamics.png" alt="Microsoft Dynamics" class="partner-img">
+                <img src="Aveva.png" alt="AVEVA" class="partner-img">
+                <img src="Oracle.png" alt="Oracle" class="partner-img">
+                <img src="zoho.png" alt="ZOHO" class="partner-img">
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="container split-layout animate-on-scroll">
+            <div>
+                <h4>Company Overview</h4>
+                <h2>SAUDI-BASED INDUSTRIAL CONSULTING</h2>
+                <p>DigiLink is a Saudi-based industrial consulting firm specializing in manufacturing performance, digital transformation, Industry 4.0 strategy, and Smart Industry Readiness Index (SIRI) assessments. With over 27 years of experience in manufacturing, maintenance, and reliability, DigiLink supports factories across the Kingdom in improving operational performance and aligning with Saudi Vision 2030 industrial objectives.</p>
+            </div>
+            <div>
+                <div class="vision-box">
+                    <h3><i class="fas fa-eye"></i> OUR VISION</h3>
+                    <p>To be the leading partner enabling Saudi factories to achieve world-class digital maturity and sustainable operational excellence.</p>
+                </div>
+                <div class="vision-box">
+                    <h3><i class="fas fa-bullseye"></i> OUR MISSION</h3>
+                    <p>To provide Saudi industries with reliable, data-driven, and globally benchmarked consulting services that accelerate Industry 4.0 readiness and create measurable transformation impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-digilink">
+        <div class="container animate-on-scroll">
+            <h2 style="text-align: center;">Why DigiLink?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-certificate feature-icon"></i>
+                    <h3>Certified SIRI Assessors</h3>
+                    <p>Our staff hold official Certified SIRI Assessor accreditation issued by INCIT and TÜV SÜD Middle East. This certification enables DigiLink to conduct official SIRI assessments recognized internationally and required by government programs.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-industry feature-icon"></i>
+                    <h3>Deep Local Expertise</h3>
+                    <p>With 27+ years in manufacturing, maintenance, and reliability, we deploy methodologies optimized for Saudi factories—especially small to mid-size plants (SMEs) seeking cost-effective maturity improvements.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-project-diagram feature-icon"></i>
+                    <h3>End-to-End Support</h3>
+                    <p>We provide full Digital Transformation Support, from initial assessment to feasibility analysis, roadmap design, implementation support, and progress tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container animate-on-scroll">
+            <h2>Core Services</h2>
+            <div class="service-container">
+                <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-chart-pie"></i></div>
+                    <div class="service-content">
+                        <h3>Feasibility Studies</h3>
+                        <p>Detailed technical and financial analysis.</p>
+                        <ul>
+                            <li>Establishing new factories</li>
+                            <li>Upgrading existing production lines</li>
+                            <li>Financial modeling for government funding</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-certificate"></i></div>
+                    <div class="service-content">
+                        <h3>Certified SIRI Assessment</h3>
+                        <p>Official readiness scoring.</p>
+                        <ul>
+                            <li>Official Accredited Assessment</li>
+                            <li>Process, Technology, & Organization scoring</li>
+                            <li>Global benchmarking reports</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-network-wired"></i></div>
+                    <div class="service-content">
+                        <h3>Digital Transformation</h3>
+                        <p>Strategy design to raise digital maturity.</p>
+                        <ul>
+                            <li>Technology architecture blueprints</li>
+                            <li>CAPEX and OPEX planning</li>
+                            <li>Integration Strategy (ERP, IoT, MES)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-cogs"></i></div>
+                    <div class="service-content">
+                        <h3>Asset Management</h3>
+                        <p>Optimizing equipment reliability.</p>
+                        <ul>
+                            <li>Reliability Centered Maintenance (RCM)</li>
+                            <li>Operational efficiency analysis</li>
+                            <li>Downtime reduction strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sectors" class="sectors">
+        <div class="container animate-on-scroll">
+            <h4>SECTORS SERVED</h4>
+            <div class="sector-grid">
+                <div class="sector-card"><i class="fas fa-cube sector-icon"></i><div class="sector-name">Plastics & Packaging</div></div>
+                <div class="sector-card"><i class="fas fa-utensils sector-icon"></i><div class="sector-name">Food & Beverage</div></div>
+                <div class="sector-card"><i class="fas fa-hammer sector-icon"></i><div class="sector-name">Metals & Fabrication</div></div>
+                <div class="sector-card"><i class="fas fa-first-aid sector-icon"></i><div class="sector-name">Medical Packaging</div></div>
+                <div class="sector-card"><i class="fas fa-wind sector-icon"></i><div class="sector-name">HVAC & Building</div></div>
+                <div class="sector-card"><i class="fas fa-warehouse sector-icon"></i><div class="sector-name">Logistics</div></div>
+                <div class="sector-card"><i class="fas fa-print sector-icon"></i><div class="sector-name">Printing Lines</div></div>
+                <div class="sector-card"><i class="fas fa-wrench sector-icon"></i><div class="sector-name">Industrial Services</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="approach">
+        <div class="container animate-on-scroll">
+            <h2>Our Approach</h2>
+            <p>A structured 4-Phase Transformation Cycle</p>
+            <div class="process-steps">
+                
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-icon">1</div>
+                        <h4>Diagnostic</h4>
+                    </div>
+                    <ul>
+                        <li>SIRI Assessment and site visits</li>
+                        <li>Data collection and operational analysis</li>
+                        <li>Maturity scoring across 16 SIRI dimensions</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-icon">2</div>
+                        <h4>Strategy Design</h4>
+                    </div>
+                    <ul>
+                        <li>Target maturity definition</li>
+                        <li>Technology architecture blueprint</li>
+                        <li>Prioritized transformation roadmap</li>
+                        <li>CAPEX and OPEX planning</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-icon">3</div>
+                        <h4>Execution Support</h4>
+                    </div>
+                    <ul>
+                        <li>Vendor selection and implementation oversight</li>
+                        <li>Change management and training</li>
+                        <li>KPI creation and governance setup</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-icon">4</div>
+                        <h4>Monitor & Improve</h4>
+                    </div>
+                    <ul>
+                        <li>Periodic maturity re-assessments</li>
+                        <li>Implementation audits</li>
+                        <li>Continuous optimization cycles</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="v2030">
+        <div class="container v2030-layout animate-on-scroll">
+            <div style="flex: 1;">
+                <h2>Alignment with Saudi Vision 2030</h2>
+                <p>DigiLink directly supports Vision 2030 industrial transformation pillars. Our services help factories access government programs and funding.</p>
+                <ul class="v2030-list">
+                    <li><i class="fas fa-check"></i> Enhancing productivity and efficiency</li>
+                    <li><i class="fas fa-check"></i> Localizing advanced technologies</li>
+                    <li><i class="fas fa-check"></i> Supporting SMEs in Industry 4.0</li>
+                    <li><i class="fas fa-check"></i> Raising national competitiveness</li>
+                    <li><i class="fas fa-check"></i> Reducing waste & sustainability</li>
+                    <li><i class="fas fa-check"></i> Increasing export readiness</li>
+                </ul>
+            </div>
+            <img src="vision.jpg" alt="Saudi Vision 2030" class="v2030-img">
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p style="margin-bottom: 30px;">Ready to start your transformation? Contact our certified team today.</p>
+            <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@digilink.sa</p>
+            <p><strong><i class="fas fa-phone"></i> Mobile:</strong> +966 50 033 4664</p>
+            <p><strong><i class="fas fa-phone-alt"></i> Landline:</strong> +966 13 349 2000</p>
+            <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> Industrial Jubail, Saudi Arabia</p>
+        </div>
+        <div class="contact-form">
+            <h2 style="color: var(--brand-dark);">Project Inquiry</h2>
+            
+            <form id="inquiryForm" onsubmit="sendEmail(event)">
+                <input type="text" id="name" class="form-field" placeholder="Full Name" required>
+                <input type="text" id="company" class="form-field" placeholder="Company Name" required>
+                <input type="email" id="email" class="form-field" placeholder="Email Address" required>
+                
+                <select id="service" class="form-field" required>
+                    <option value="">Select Service...</option>
+                    <option value="SIRI Assessment">SIRI Assessment</option>
+                    <option value="Feasibility Study">Feasibility Study</option>
+                    <option value="Digital Transformation">Digital Transformation Strategy</option>
+                    <option value="Asset Management">Asset Management</option>
+                    <option value="General Inquiry">Other</option>
+                </select>
+                
+                <textarea id="message" class="form-field" rows="4" placeholder="Briefly describe your project requirements..." required></textarea>
+                <button type="submit" class="btn-primary" style="width: 100%;">Submit Inquiry</button>
+            </form>
+            <p style="font-size: 12px; margin-top: 10px; color: #888;">* Clicking Submit will open your email client with a generated Request Number.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DigiLink Consulting. Transformation with Real Impact.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Scroll Animation Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+
+        // 2. Automated Email Subject Generator
+        function sendEmail(event) {
+            event.preventDefault(); // Stop standard form submission
+
+            // Get Field Values
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Generate Random Request Number (e.g., REQ-4821)
+            const reqNumber = Math.floor(1000 + Math.random() * 9000);
+
+            // Construct Subject Line
+            const subject = `Project Inquiry: ${service} - Ref #REQ-${reqNumber}`;
+
+            // Construct Email Body
+            const body = `Ref Number: #REQ-${reqNumber}%0D%0A` +
+                         `Service Request: ${service}%0D%0A%0D%0A` +
+                         `Name: ${name}%0D%0A` +
+                         `Company: ${company}%0D%0A` +
+                         `Message:%0D%0A${message}`;
+
+            // Open Mail Client
+            window.location.href = `mailto:info@digilink.sa?subject=${encodeURIComponent(subject)}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>
