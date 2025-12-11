@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -94,10 +95,14 @@
             padding: 5px 15px;
             border-radius: 4px;
             font-size: 14px !important;
-            font-family: 'Montserrat', sans-serif !important; /* English font for button */
+            font-family: 'Montserrat', sans-serif !important; 
+        }
+        .lang-switch:hover {
+            background-color: var(--brand-dark);
+            color: white !important;
         }
 
-        /* HAMBURGER MENU (For Mobile) */
+        /* HAMBURGER MENU */
         .hamburger {
             display: none;
             font-size: 28px;
@@ -212,10 +217,8 @@
 
         /* --- MOBILE RESPONSIVENESS FIXES (RTL) --- */
         @media (max-width: 900px) {
-            /* 1. Show Hamburger */
             .hamburger { display: block; }
 
-            /* 2. Style Mobile Menu (RTL Friendly) */
             .nav-menu {
                 position: absolute;
                 top: 70px;
@@ -225,16 +228,13 @@
                 flex-direction: column;
                 padding: 20px;
                 box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-                display: none; /* Hidden by default */
+                display: none; 
                 text-align: center;
                 gap: 25px;
             }
 
-            .nav-menu.active {
-                display: flex;
-            }
+            .nav-menu.active { display: flex; }
 
-            /* 3. Fix Grids to Single Column */
             .split-layout, 
             .features-grid, 
             .service-container, 
@@ -253,11 +253,9 @@
 
             .v2030-layout { flex-direction: column-reverse; }
             
-            /* 4. Adjust Hero Text */
             .hero-text h1 { font-size: 2.2rem; }
             .hero-text p { font-size: 1rem; }
             
-            /* 5. Adjust Spacing */
             .contact-info, .contact-form { padding: 30px 20px; }
         }
     </style>
@@ -314,16 +312,16 @@
             <div>
                 <h4>نظرة عامة</h4>
                 <h2>استشارات صناعية سعودية</h2>
-                <p>ديجي لينك هي شركة استشارات صناعية مقرها السعودية متخصصة في أداء التصنيع، والتحول الرقمي، واستراتيجيات الثورة الصناعية الرابعة، وتقييم مؤشر الجاهزية للصناعة الذكية (SIRI). [cite_start]بخبرة تزيد عن 27 عاماً في التصنيع والصيانة والموثوقية، تدعم ديجي لينك المصانع في جميع أنحاء المملكة لتحسين الأداء التشغيلي والمواءمة مع أهداف رؤية المملكة 2030 الصناعية [cite: 7-9].</p>
+                <p>ديجي لينك هي شركة استشارات صناعية مقرها السعودية متخصصة في أداء التصنيع، والتحول الرقمي، واستراتيجيات الثورة الصناعية الرابعة، وتقييم مؤشر الجاهزية للصناعة الذكية (SIRI). بخبرة تزيد عن 27 عاماً في التصنيع والصيانة والموثوقية، تدعم ديجي لينك المصانع في جميع أنحاء المملكة لتحسين الأداء التشغيلي والمواءمة مع أهداف رؤية المملكة 2030 الصناعية.</p>
             </div>
             <div>
                 <div class="vision-box">
                     <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
-                    [cite_start]<p>أن نكون الشريك الرائد في تمكين المصانع السعودية من تحقيق النضج الرقمي العالمي والتميز التشغيلي المستدام [cite: 14-15].</p>
+                    <p>أن نكون الشريك الرائد في تمكين المصانع السعودية من تحقيق النضج الرقمي العالمي والتميز التشغيلي المستدام.</p>
                 </div>
                 <div class="vision-box">
                     <h3><i class="fas fa-bullseye"></i> رسالتنا</h3>
-                    [cite_start]<p>تزويد الصناعات السعودية بخدمات استشارية موثوقة وقائمة على البيانات وفق معايير عالمية لتسريع جاهزيتها للثورة الصناعية الرابعة وإحداث أثر تحولي ملموس [cite: 16-18].</p>
+                    <p>تزويد الصناعات السعودية بخدمات استشارية موثوقة وقائمة على البيانات وفق معايير عالمية لتسريع جاهزيتها للثورة الصناعية الرابعة وإحداث أثر تحولي ملموس.</p>
                 </div>
             </div>
         </div>
@@ -336,17 +334,17 @@
                 <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
                     <h3>مقيمون معتمدون لـ SIRI</h3>
-                    <p>يحمل فريقنا اعتماد "مقيم SIRI معتمد" الصادر عن INCIT و TÜV SÜD الشرق الأوسط. [cite_start]هذا الاعتماد يمكننا من إجراء تقييمات SIRI رسمية معترف بها دولياً ومطلوبة من البرامج الحكومية [cite: 22-24].</p>
+                    <p>يحمل فريقنا اعتماد "مقيم SIRI معتمد" الصادر عن INCIT و TÜV SÜD الشرق الأوسط. هذا الاعتماد يمكننا من إجراء تقييمات SIRI رسمية معترف بها دولياً ومطلوبة من البرامج الحكومية.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
                     <h3>خبرة محلية عميقة</h3>
-                    [cite_start]<p>مع أكثر من 27 عاماً في التصنيع والصيانة، نطبق منهجيات محسنة للمصانع السعودية—خاصة المصانع الصغيرة والمتوسطة التي تسعى لتحسينات سريعة وفعالة من حيث التكلفة [cite: 25-26].</p>
+                    <p>مع أكثر من 27 عاماً في التصنيع والصيانة، نطبق منهجيات محسنة للمصانع السعودية—خاصة المصانع الصغيرة والمتوسطة التي تسعى لتحسينات سريعة وفعالة من حيث التكلفة.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-project-diagram feature-icon"></i>
                     <h3>دعم شامل من البداية للنهاية</h3>
-                    [cite_start]<p>نقدم دعماً كاملاً للتحول الرقمي، بدءاً من التقييم الأولي ودراسة الجدوى، مروراً بتصميم خارطة الطريق، وصولاً إلى دعم التنفيذ وتتبع التقدم[cite: 27].</p>
+                    <p>نقدم دعماً كاملاً للتحول الرقمي، بدءاً من التقييم الأولي ودراسة الجدوى، مروراً بتصميم خارطة الطريق، وصولاً إلى دعم التنفيذ وتتبع التقدم.</p>
                 </div>
             </div>
         </div>
@@ -372,7 +370,7 @@
                     <div class="service-content">
                         <h3>تقييم SIRI المعتمد</h3>
                         <ul>
-                            [cite_start]<li>تقييم معتمد رسمياً [cite: 33-34]</li>
+                            <li>تقييم معتمد رسمياً</li>
                             <li>تقييم العمليات، التكنولوجيا، والتنظيم</li>
                             <li>تقارير مقارنة مع المعايير العالمية</li>
                         </ul>
@@ -432,7 +430,7 @@
                         <h4>التشخيص</h4>
                     </div>
                     <ul>
-                        [cite_start]<li>تقييم SIRI وزيارات ميدانية [cite: 65]</li>
+                        <li>تقييم SIRI وزيارات ميدانية</li>
                         <li>جمع البيانات والتحليل التشغيلي</li>
                         <li>تسجيل النضج عبر 16 بعداً</li>
                     </ul>
@@ -444,7 +442,7 @@
                         <h4>تصميم الاستراتيجية</h4>
                     </div>
                     <ul>
-                        [cite_start]<li>تحديد مستوى النضج المستهدف [cite: 69]</li>
+                        <li>تحديد مستوى النضج المستهدف</li>
                         <li>مخطط البنية التقنية</li>
                         <li>خارطة طريق التحول ذات الأولوية</li>
                         <li>تخطيط الميزانية (CAPEX و OPEX)</li>
@@ -457,7 +455,7 @@
                         <h4>دعم التنفيذ</h4>
                     </div>
                     <ul>
-                        [cite_start]<li>اختيار الموردين والإشراف على التنفيذ [cite: 77]</li>
+                        <li>اختيار الموردين والإشراف على التنفيذ</li>
                         <li>إدارة التغيير والتدريب</li>
                         <li>إنشاء مؤشرات الأداء (KPIs) والحوكمة</li>
                     </ul>
@@ -469,7 +467,7 @@
                         <h4>المراقبة والتحسين</h4>
                     </div>
                     <ul>
-                        [cite_start]<li>إعادة تقييم النضج بشكل دوري [cite: 81]</li>
+                        <li>إعادة تقييم النضج بشكل دوري</li>
                         <li>تدقيق التنفيذ</li>
                         <li>دورات التحسين المستمر</li>
                     </ul>
@@ -483,7 +481,7 @@
         <div class="container v2030-layout animate-on-scroll">
             <div style="flex: 1;">
                 <h2>المواءمة مع رؤية المملكة 2030</h2>
-                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية. [cite_start]تساعد خدماتنا المصانع في الوصول إلى البرامج الحكومية والتمويل من خلال توفير تقييمات منظمة وخطط تنفيذية[cite: 91, 98].</p>
+                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية. تساعد خدماتنا المصانع في الوصول إلى البرامج الحكومية والتمويل من خلال توفير تقييمات منظمة وخطط تنفيذية.</p>
                 <ul class="v2030-list">
                     <li><i class="fas fa-check"></i> تعزيز الإنتاجية والكفاءة التشغيلية</li>
                     <li><i class="fas fa-check"></i> توطين التقنيات المتقدمة</li>
@@ -539,7 +537,11 @@
     </footer>
 
     <script>
-        // 1. Scroll Animation Logic
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+
         document.addEventListener("DOMContentLoaded", function() {
             const observerOptions = { threshold: 0.1 };
             const observer = new IntersectionObserver((entries) => {
@@ -554,13 +556,6 @@
             elementsToAnimate.forEach(el => observer.observe(el));
         });
 
-        // 2. Menu Toggle
-        function toggleMenu() {
-            var menu = document.getElementById("navMenu");
-            menu.classList.toggle("active");
-        }
-
-        // 3. Automated Email Subject Generator
         function sendEmail(event) {
             event.preventDefault(); 
 
