@@ -23,17 +23,17 @@
         html { scroll-behavior: smooth; }
         
         body {
-            font-family: 'Tajawal', sans-serif; /* Arabic Body Font */
+            font-family: 'Tajawal', sans-serif;
             color: #444;
             line-height: 1.8;
             background-color: var(--white);
             margin: 0; padding: 0;
             overflow-x: hidden;
-            text-align: right; /* Default alignment for Arabic */
+            text-align: right;
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Cairo', sans-serif; /* Arabic Heading Font */
+            font-family: 'Cairo', sans-serif;
             font-weight: 800; 
             color: var(--brand-dark);
             margin-bottom: 1rem;
@@ -46,16 +46,7 @@
             padding: 0 20px;
         }
 
-        /* --- 2. ANIMATIONS --- */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translate3d(0, 40px, 0); }
-            to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        .animate-on-scroll { opacity: 0; }
-        .is-visible { animation: fadeInUp 0.8s ease-out forwards; }
-
-        /* --- 3. HEADER & LOGO --- */
+        /* --- 2. HEADER & LOGO --- */
         header {
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -64,18 +55,23 @@
             top: 0;
             z-index: 1000;
             padding: 10px 0;
-            transition: all 0.3s ease;
         }
 
-        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: relative;
+        }
 
         .brand-logo img {
-            height: 70px; 
+            height: 60px; 
             width: auto;
             display: block;
         }
 
-        .nav-menu { display: flex; gap: 25px; list-style: none; padding: 0; }
+        /* Desktop Menu */
+        .nav-menu { display: flex; gap: 20px; list-style: none; padding: 0; align-items: center; }
         .nav-menu a {
             text-decoration: none;
             color: var(--brand-dark);
@@ -92,16 +88,30 @@
             border-radius: 4px;
             font-family: 'Cairo', sans-serif;
         }
-        .btn-nav:hover { background: var(--brand-green); }
 
-        /* Language Switcher */
         .lang-switch {
             border: 1px solid var(--brand-dark);
-            padding: 8px 15px;
+            padding: 5px 15px;
             border-radius: 4px;
-            margin-right: 10px;
-            font-size: 13px;
+            font-size: 14px !important;
+            font-family: 'Montserrat', sans-serif !important; /* English font for button */
         }
+
+        /* HAMBURGER MENU (For Mobile) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            color: var(--brand-dark);
+            cursor: pointer;
+        }
+
+        /* --- 3. ANIMATIONS --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate3d(0, 40px, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .animate-on-scroll { opacity: 0; }
+        .is-visible { animation: fadeInUp 0.8s ease-out forwards; }
 
         /* --- 4. HERO SECTION --- */
         .hero {
@@ -113,8 +123,8 @@
             align-items: center;
             margin-top: 80px;
             color: white;
+            direction: rtl;
             animation: fadeIn 1.5s ease-in-out; 
-            direction: rtl; /* Ensure hero text is RTL */
         }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
@@ -136,131 +146,119 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(58, 125, 66, 0.4);
         }
-        .btn-primary:hover { background: #2e6634; transform: translateY(-3px); }
 
-        /* --- 5. PARTNERS --- */
+        /* --- 5. SECTIONS & GRIDS --- */
         .partners { padding: 50px 0; background: #fff; text-align: center; }
-        .partners p { font-size: 1rem; color: #999; margin-bottom: 30px; font-weight: 700; }
-        .logo-grid { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; }
-        .partner-img { height: 40px; max-width: 150px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all 0.4s ease; }
-        .partner-img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+        .logo-grid { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .partner-img { height: 40px; max-width: 120px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; }
 
-        /* --- 6. ABOUT --- */
-        .about-section { padding: 100px 0; background: var(--brand-light); }
-        .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-        .vision-box { background: white; padding: 30px; border-right: 6px solid var(--brand-green); /* FLIPPED FOR RTL */ border-left: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 20px; transition: transform 0.3s; }
-        .vision-box:hover { transform: translateX(-10px); }
-        .vision-box h3 { color: var(--brand-green); font-size: 1.2rem; margin-bottom: 10px; }
-        .vision-box p { font-size: 1rem; margin: 0; color: #555; }
-
-        /* --- 7. WHY DIGILINK --- */
-        .why-digilink { padding: 100px 0; background: var(--white); }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
-        .feature-card { padding: 30px; border: 1px solid #eee; border-radius: 8px; transition: 0.3s; position: relative; overflow: hidden; }
-        .feature-card:hover { border-color: var(--brand-green); box-shadow: 0 10px 40px rgba(0,0,0,0.08); transform: translateY(-5px); }
+        .about-section { padding: 80px 0; background: var(--brand-light); }
+        .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        
+        .vision-box { background: white; padding: 30px; border-right: 6px solid var(--brand-green); margin-bottom: 20px; }
+        
+        /* Why DigiLink Grid */
+        .why-digilink { padding: 80px 0; background: var(--white); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .feature-card { padding: 30px; border: 1px solid #eee; border-radius: 8px; }
         .feature-icon { font-size: 2.5rem; color: var(--brand-green); margin-bottom: 20px; }
 
-        /* --- 8. SERVICES --- */
-        .services { padding: 100px 0; background: #1a1a1a; color: white; }
-        .services h2 { color: white; text-align: center; margin-bottom: 60px; }
+        /* Services Grid */
+        .services { padding: 80px 0; background: #1a1a1a; color: white; }
         .service-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        .service-item { background: rgba(255,255,255,0.05); padding: 40px; border-bottom: 3px solid transparent; transition: 0.3s; display: flex; gap: 20px; align-items: flex-start; }
-        .service-item:hover { background: rgba(255,255,255,0.1); border-bottom-color: var(--brand-green); }
-        .service-graphic { font-size: 2.5rem; color: var(--brand-green); flex-shrink: 0; background: rgba(255,255,255,0.1); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
-        .service-content h3 { color: white; font-size: 1.4rem; margin-top: 0; }
-        .service-content ul { padding-right: 20px; padding-left: 0; margin-top: 15px; color: #bbb; font-size: 1rem; } /* Adjusted padding for RTL */
-        .service-content li { margin-bottom: 5px; }
+        .service-item { background: rgba(255,255,255,0.05); padding: 30px; display: flex; gap: 20px; }
+        .service-graphic { font-size: 2.5rem; color: var(--brand-green); min-width: 50px; }
+        .service-content ul { padding-right: 20px; padding-left: 0; color: #ccc; }
 
-        /* --- 9. SECTORS --- */
+        /* Sectors Grid */
         .sectors { padding: 80px 0; background: var(--brand-green); text-align: center; color: white; }
-        .sectors h4 { color: white; margin-bottom: 40px; font-size: 2rem; }
-        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-        .sector-card { background: rgba(255,255,255,0.1); padding: 25px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
-        .sector-card:hover { background: rgba(255,255,255,0.25); transform: translateY(-5px); }
-        .sector-icon { font-size: 2rem; margin-bottom: 15px; display: block; opacity: 0.9; }
-        .sector-name { font-weight: 600; font-size: 1rem; }
+        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .sector-card { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 8px; }
 
-        /* --- 10. APPROACH (Updated for RTL) --- */
-        .approach { padding: 100px 0; background: var(--white); text-align: center; }
+        /* Approach */
+        .approach { padding: 80px 0; text-align: center; }
         .process-steps { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
             gap: 20px; 
-            margin-top: 60px; 
-            position: relative; 
+            margin-top: 50px; 
+            position: relative;
             align-items: start;
+            text-align: right; 
         }
         .process-steps::before {
             content:''; position: absolute; top: 25px; left: 10%; right: 10%; height: 2px; background: #eee; z-index: 1;
         }
-        .step { position: relative; z-index: 2; padding: 0 10px; text-align: right; } /* RTL Align */
+        .step { position: relative; z-index: 2; padding: 0 10px; }
         .step-header { text-align: center; margin-bottom: 15px; }
-        .step-icon {
-            width: 50px; height: 50px; background: var(--brand-dark); color: white;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 15px; font-weight: bold; border: 5px solid white; transition: 0.3s;
-        }
-        .step:hover .step-icon { background: var(--brand-green); transform: scale(1.1); }
-        .step h4 { font-size: 1.2rem; margin-bottom: 15px; text-align: center; }
-        .step ul { 
-            list-style: none; 
-            padding: 0; 
-            font-size: 0.9rem; 
-            color: #666; 
-            border-top: 2px solid #f0f0f0;
-            padding-top: 15px;
-        }
-        .step ul li { 
-            position: relative; 
-            padding-right: 15px; /* RTL Padding */
-            padding-left: 0;
-            margin-bottom: 8px; 
-            line-height: 1.5;
-        }
-        .step ul li::before {
-            content: "•";
-            color: var(--brand-green);
-            position: absolute;
-            right: 0; /* RTL Position */
-            font-weight: bold;
-        }
+        .step-icon { width: 50px; height: 50px; background: var(--brand-dark); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
+        .step ul { padding-right: 20px; padding-left: 0; font-size: 0.9rem; color: #666; }
 
-        /* --- 11. VISION 2030 --- */
-        .v2030 { padding: 80px 0; background: #f8f9fa; border-top: 1px solid #eee; }
-        .v2030-layout { display: flex; align-items: center; gap: 60px; }
-        .v2030-img { width: 220px; height: auto; display: block; mix-blend-mode: multiply; }
-        .v2030-list { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .v2030-list li { font-size: 1rem; color: #555; display: flex; align-items: start; gap: 10px; }
-        .v2030-list li i { color: var(--brand-green); margin-top: 5px; margin-left: 5px; } /* Margin adjustment */
+        /* Vision 2030 */
+        .v2030 { padding: 80px 0; background: #f8f9fa; }
+        .v2030-layout { display: flex; align-items: center; gap: 50px; }
+        .v2030-img { width: 200px; }
+        .v2030-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding: 0; }
+        .v2030-list li i { color: var(--brand-green); margin-left: 10px; } 
 
-        /* --- 12. CONTACT FORM --- */
+        /* Contact */
         .contact { display: grid; grid-template-columns: 1fr 1.5fr; }
-        .contact-info { background: var(--brand-dark); color: white; padding: 80px; text-align: right; }
-        .contact-form { background: white; padding: 80px; text-align: right; }
-        
+        .contact-info { background: var(--brand-dark); color: white; padding: 60px; text-align: right; }
+        .contact-form { background: white; padding: 60px; text-align: right; }
         .form-field { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; background: #f9f9f9; font-family: 'Tajawal', sans-serif; }
-        .form-field:focus { outline: none; border-color: var(--brand-green); background: white; }
-        
-        /* Contact Icons spacing for RTL */
-        .contact-info p i { margin-left: 10px; width: 20px; text-align: center; }
+        .contact-info p i { margin-left: 10px; }
 
         footer { background: #111; color: #666; padding: 30px; text-align: center; font-size: 13px; }
 
-        /* Responsive */
+        /* --- MOBILE RESPONSIVENESS FIXES (RTL) --- */
         @media (max-width: 900px) {
-            .split-layout, .feature-grid, .service-container, .contact, .v2030-layout { display: block; }
-            .process-steps { grid-template-columns: 1fr; gap: 40px; }
+            /* 1. Show Hamburger */
+            .hamburger { display: block; }
+
+            /* 2. Style Mobile Menu (RTL Friendly) */
+            .nav-menu {
+                position: absolute;
+                top: 70px;
+                right: 0; /* Align right for RTL */
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+                display: none; /* Hidden by default */
+                text-align: center;
+                gap: 25px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            /* 3. Fix Grids to Single Column */
+            .split-layout, 
+            .features-grid, 
+            .service-container, 
+            .process-steps, 
+            .contact, 
+            .v2030-layout,
+            .v2030-list { 
+                grid-template-columns: 1fr !important;
+                display: grid;
+                gap: 30px;
+            }
+
             .process-steps::before { display: none; }
             .step { text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; }
             .step ul { text-align: right; display: inline-block; }
+
+            .v2030-layout { flex-direction: column-reverse; }
             
-            .hero-text h1 { font-size: 2.5rem; }
-            .nav-menu { display: none; }
-            .partner-img { margin-bottom: 20px; margin-left: 20px; }
-            .contact-info, .contact-form { padding: 40px 20px; }
-            .sector-grid { grid-template-columns: repeat(2, 1fr); }
-            .v2030-img { margin-top: 30px; width: 150px; }
-            .v2030-list { grid-template-columns: 1fr; }
+            /* 4. Adjust Hero Text */
+            .hero-text h1 { font-size: 2.2rem; }
+            .hero-text p { font-size: 1rem; }
+            
+            /* 5. Adjust Spacing */
+            .contact-info, .contact-form { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -272,12 +270,18 @@
                 <a href="#" class="brand-logo">
                     <img src="logo.jpg" alt="DigiLink Logo">
                 </a>
-                <ul class="nav-menu">
-                    <li><a href="#about">عن الشركة</a></li>
-                    <li><a href="#why">لماذا ديجي لينك؟</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#sectors">القطاعات</a></li>
-                    <li><a href="index.html" class="lang-switch">English</a></li> <li><a href="#contact" class="btn-nav">تواصل معنا</a></li>
+                
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" onclick="toggleMenu()">عن الشركة</a></li>
+                    <li><a href="#why" onclick="toggleMenu()">لماذا ديجي لينك؟</a></li>
+                    <li><a href="#services" onclick="toggleMenu()">خدماتنا</a></li>
+                    <li><a href="#sectors" onclick="toggleMenu()">القطاعات</a></li>
+                    <li><a href="index.html" class="lang-switch">English</a></li>
+                    <li><a href="#contact" class="btn-nav" onclick="toggleMenu()">تواصل معنا</a></li>
                 </ul>
             </nav>
         </div>
@@ -310,16 +314,16 @@
             <div>
                 <h4>نظرة عامة</h4>
                 <h2>استشارات صناعية سعودية</h2>
-                <p>ديجي لينك هي شركة استشارات صناعية مقرها السعودية متخصصة في أداء التصنيع، والتحول الرقمي، واستراتيجيات الثورة الصناعية الرابعة، وتقييم مؤشر الجاهزية للصناعة الذكية (SIRI). بخبرة تزيد عن 27 عاماً في التصنيع والصيانة والموثوقية، تدعم ديجي لينك المصانع في جميع أنحاء المملكة لتحسين الأداء التشغيلي والمواءمة مع أهداف رؤية المملكة 2030 الصناعية.</p>
+                <p>ديجي لينك هي شركة استشارات صناعية مقرها السعودية متخصصة في أداء التصنيع، والتحول الرقمي، واستراتيجيات الثورة الصناعية الرابعة، وتقييم مؤشر الجاهزية للصناعة الذكية (SIRI). [cite_start]بخبرة تزيد عن 27 عاماً في التصنيع والصيانة والموثوقية، تدعم ديجي لينك المصانع في جميع أنحاء المملكة لتحسين الأداء التشغيلي والمواءمة مع أهداف رؤية المملكة 2030 الصناعية [cite: 7-9].</p>
             </div>
             <div>
                 <div class="vision-box">
                     <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
-                    <p>أن نكون الشريك الرائد في تمكين المصانع السعودية من تحقيق النضج الرقمي العالمي والتميز التشغيلي المستدام.</p>
+                    [cite_start]<p>أن نكون الشريك الرائد في تمكين المصانع السعودية من تحقيق النضج الرقمي العالمي والتميز التشغيلي المستدام [cite: 14-15].</p>
                 </div>
                 <div class="vision-box">
                     <h3><i class="fas fa-bullseye"></i> رسالتنا</h3>
-                    <p>تزويد الصناعات السعودية بخدمات استشارية موثوقة وقائمة على البيانات وفق معايير عالمية لتسريع جاهزيتها للثورة الصناعية الرابعة وإحداث أثر تحولي ملموس.</p>
+                    [cite_start]<p>تزويد الصناعات السعودية بخدمات استشارية موثوقة وقائمة على البيانات وفق معايير عالمية لتسريع جاهزيتها للثورة الصناعية الرابعة وإحداث أثر تحولي ملموس [cite: 16-18].</p>
                 </div>
             </div>
         </div>
@@ -332,17 +336,17 @@
                 <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
                     <h3>مقيمون معتمدون لـ SIRI</h3>
-                    <p>يحمل فريقنا اعتماد "مقيم SIRI معتمد" الصادر عن INCIT و TÜV SÜD الشرق الأوسط. هذا الاعتماد يمكننا من إجراء تقييمات SIRI رسمية معترف بها دولياً ومطلوبة من البرامج الحكومية.</p>
+                    <p>يحمل فريقنا اعتماد "مقيم SIRI معتمد" الصادر عن INCIT و TÜV SÜD الشرق الأوسط. [cite_start]هذا الاعتماد يمكننا من إجراء تقييمات SIRI رسمية معترف بها دولياً ومطلوبة من البرامج الحكومية [cite: 22-24].</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
                     <h3>خبرة محلية عميقة</h3>
-                    <p>مع أكثر من 27 عاماً في التصنيع والصيانة، نطبق منهجيات محسنة للمصانع السعودية—خاصة المصانع الصغيرة والمتوسطة التي تسعى لتحسينات سريعة وفعالة من حيث التكلفة.</p>
+                    [cite_start]<p>مع أكثر من 27 عاماً في التصنيع والصيانة، نطبق منهجيات محسنة للمصانع السعودية—خاصة المصانع الصغيرة والمتوسطة التي تسعى لتحسينات سريعة وفعالة من حيث التكلفة [cite: 25-26].</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-project-diagram feature-icon"></i>
                     <h3>دعم شامل من البداية للنهاية</h3>
-                    <p>نقدم دعماً كاملاً للتحول الرقمي، بدءاً من التقييم الأولي ودراسة الجدوى، مروراً بتصميم خارطة الطريق، وصولاً إلى دعم التنفيذ وتتبع التقدم.</p>
+                    [cite_start]<p>نقدم دعماً كاملاً للتحول الرقمي، بدءاً من التقييم الأولي ودراسة الجدوى، مروراً بتصميم خارطة الطريق، وصولاً إلى دعم التنفيذ وتتبع التقدم[cite: 27].</p>
                 </div>
             </div>
         </div>
@@ -356,7 +360,6 @@
                     <div class="service-graphic"><i class="fas fa-chart-pie"></i></div>
                     <div class="service-content">
                         <h3>دراسات الجدوى</h3>
-                        <p>تحليل فني ومالي مفصل لإنشاء المصانع أو تطويرها.</p>
                         <ul>
                             <li>دراسات إنشاء مصانع جديدة</li>
                             <li>تحليل تطوير خطوط الإنتاج القائمة</li>
@@ -368,9 +371,8 @@
                     <div class="service-graphic"><i class="fas fa-certificate"></i></div>
                     <div class="service-content">
                         <h3>تقييم SIRI المعتمد</h3>
-                        <p>تسجيل رسمي للجاهزية عبر 16 بعداً.</p>
                         <ul>
-                            <li>تقييم معتمد رسمياً</li>
+                            [cite_start]<li>تقييم معتمد رسمياً [cite: 33-34]</li>
                             <li>تقييم العمليات، التكنولوجيا، والتنظيم</li>
                             <li>تقارير مقارنة مع المعايير العالمية</li>
                         </ul>
@@ -380,7 +382,6 @@
                     <div class="service-graphic"><i class="fas fa-network-wired"></i></div>
                     <div class="service-content">
                         <h3>التحول الرقمي</h3>
-                        <p>تصميم الاستراتيجيات لرفع النضج الرقمي.</p>
                         <ul>
                             <li>مخططات البنية التحتية التقنية</li>
                             <li>تخطيط النفقات الرأسمالية والتشغيلية (CAPEX/OPEX)</li>
@@ -392,7 +393,6 @@
                     <div class="service-graphic"><i class="fas fa-cogs"></i></div>
                     <div class="service-content">
                         <h3>إدارة الأصول</h3>
-                        <p>تحسين موثوقية المعدات وإطالة عمرها الافتراضي.</p>
                         <ul>
                             <li>الصيانة المرتكزة على الموثوقية (RCM)</li>
                             <li>تحليل الكفاءة التشغيلية</li>
@@ -432,7 +432,7 @@
                         <h4>التشخيص</h4>
                     </div>
                     <ul>
-                        <li>تقييم SIRI وزيارات ميدانية</li>
+                        [cite_start]<li>تقييم SIRI وزيارات ميدانية [cite: 65]</li>
                         <li>جمع البيانات والتحليل التشغيلي</li>
                         <li>تسجيل النضج عبر 16 بعداً</li>
                     </ul>
@@ -444,7 +444,7 @@
                         <h4>تصميم الاستراتيجية</h4>
                     </div>
                     <ul>
-                        <li>تحديد مستوى النضج المستهدف</li>
+                        [cite_start]<li>تحديد مستوى النضج المستهدف [cite: 69]</li>
                         <li>مخطط البنية التقنية</li>
                         <li>خارطة طريق التحول ذات الأولوية</li>
                         <li>تخطيط الميزانية (CAPEX و OPEX)</li>
@@ -457,7 +457,7 @@
                         <h4>دعم التنفيذ</h4>
                     </div>
                     <ul>
-                        <li>اختيار الموردين والإشراف على التنفيذ</li>
+                        [cite_start]<li>اختيار الموردين والإشراف على التنفيذ [cite: 77]</li>
                         <li>إدارة التغيير والتدريب</li>
                         <li>إنشاء مؤشرات الأداء (KPIs) والحوكمة</li>
                     </ul>
@@ -469,7 +469,7 @@
                         <h4>المراقبة والتحسين</h4>
                     </div>
                     <ul>
-                        <li>إعادة تقييم النضج بشكل دوري</li>
+                        [cite_start]<li>إعادة تقييم النضج بشكل دوري [cite: 81]</li>
                         <li>تدقيق التنفيذ</li>
                         <li>دورات التحسين المستمر</li>
                     </ul>
@@ -483,7 +483,7 @@
         <div class="container v2030-layout animate-on-scroll">
             <div style="flex: 1;">
                 <h2>المواءمة مع رؤية المملكة 2030</h2>
-                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية. تساعد خدماتنا المصانع في الوصول إلى البرامج الحكومية والتمويل من خلال توفير تقييمات منظمة وخطط تنفيذية.</p>
+                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية. [cite_start]تساعد خدماتنا المصانع في الوصول إلى البرامج الحكومية والتمويل من خلال توفير تقييمات منظمة وخطط تنفيذية[cite: 91, 98].</p>
                 <ul class="v2030-list">
                     <li><i class="fas fa-check"></i> تعزيز الإنتاجية والكفاءة التشغيلية</li>
                     <li><i class="fas fa-check"></i> توطين التقنيات المتقدمة</li>
@@ -502,8 +502,10 @@
             <h2>معلومات التواصل</h2>
             <p style="margin-bottom: 30px;">هل أنت مستعد لبدء رحلة التحول؟ تواصل مع فريقنا المعتمد اليوم.</p>
             <p><strong><i class="fas fa-envelope"></i> البريد الإلكتروني:</strong> info@digilink.sa</p>
-            <p><strong><i class="fas fa-phone"></i> الجوال:</strong> +966 50 033 4664</p>
-            <p><strong><i class="fas fa-phone-alt"></i> الهاتف الثابت:</strong> +966 13 349 2000</p>
+            
+            <p><strong><i class="fas fa-phone"></i> الجوال:</strong> <span dir="ltr" style="font-family: sans-serif;">+٩٦٦ ٥٠ ٠٣٣ ٤٦٦٤</span></p>
+            <p><strong><i class="fas fa-phone-alt"></i> الهاتف الثابت:</strong> <span dir="ltr" style="font-family: sans-serif;">+٩٦٦ ١٣ ٣٤٩ ٢٠٠٠</span></p>
+            
             <p><strong><i class="fas fa-map-marker-alt"></i> الموقع:</strong> الجبيل الصناعية، المملكة العربية السعودية</p>
         </div>
         <div class="contact-form">
@@ -552,7 +554,13 @@
             elementsToAnimate.forEach(el => observer.observe(el));
         });
 
-        // 2. Automated Email Subject Generator (Arabic/English Mixed)
+        // 2. Menu Toggle
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+
+        // 3. Automated Email Subject Generator
         function sendEmail(event) {
             event.preventDefault(); 
 
@@ -562,7 +570,6 @@
             const message = document.getElementById('message').value;
             const reqNumber = Math.floor(1000 + Math.random() * 9000);
 
-            // Subject Line kept in English/Arabic format for technical clarity
             const subject = `طلب مشروع جديد: ${service} - Ref #REQ-${reqNumber}`;
 
             const body = `رقم الطلب: #REQ-${reqNumber}%0D%0A` +
