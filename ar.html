@@ -168,12 +168,35 @@
         .feature-card { padding: 30px; border: 1px solid #eee; border-radius: 8px; }
         .feature-icon { font-size: 2.5rem; color: var(--brand-green); margin-bottom: 20px; }
 
-        /* Services Grid */
-        .services { padding: 80px 0; background: #1a1a1a; color: white; }
+        /* Services Grid (FIXED CONTRAST) */
+        .services { padding: 80px 0; background: #1B2428; color: white; }
+        
+        /* Force Heading to White */
+        .services h2 { 
+            color: #ffffff !important; 
+            text-align: center; 
+            margin-bottom: 60px; 
+        }
+
         .service-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        .service-item { background: rgba(255,255,255,0.05); padding: 30px; display: flex; gap: 20px; }
+        
+        .service-item { 
+            background: rgba(255, 255, 255, 0.08); 
+            padding: 30px; 
+            display: flex; 
+            gap: 20px;
+            border: 1px solid rgba(255,255,255,0.1); 
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
         .service-graphic { font-size: 2.5rem; color: var(--brand-green); min-width: 50px; }
-        .service-content ul { padding-right: 20px; padding-left: 0; color: #ccc; }
+        .service-content h3 { margin-top: 0; color: #fff; }
+        .service-content ul { padding-right: 20px; padding-left: 0; color: #f4f4f4; line-height: 1.7; }
 
         /* Sectors Grid */
         .sectors { padding: 80px 0; background: var(--brand-green); text-align: center; color: white; }
@@ -217,8 +240,10 @@
 
         /* --- MOBILE RESPONSIVENESS FIXES (RTL) --- */
         @media (max-width: 900px) {
+            /* 1. Show Hamburger */
             .hamburger { display: block; }
 
+            /* 2. Style Mobile Menu (RTL Friendly) */
             .nav-menu {
                 position: absolute;
                 top: 70px;
@@ -228,13 +253,16 @@
                 flex-direction: column;
                 padding: 20px;
                 box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-                display: none; 
+                display: none; /* Hidden by default */
                 text-align: center;
                 gap: 25px;
             }
 
-            .nav-menu.active { display: flex; }
+            .nav-menu.active {
+                display: flex;
+            }
 
+            /* 3. Fix Grids to Single Column */
             .split-layout, 
             .features-grid, 
             .service-container, 
@@ -253,9 +281,11 @@
 
             .v2030-layout { flex-direction: column-reverse; }
             
+            /* 4. Adjust Hero Text */
             .hero-text h1 { font-size: 2.2rem; }
             .hero-text p { font-size: 1rem; }
             
+            /* 5. Adjust Spacing */
             .contact-info, .contact-form { padding: 30px 20px; }
         }
     </style>
@@ -423,56 +453,38 @@
             <h2>منهجيتنا</h2>
             <p>دورة تحول منظمة من 4 مراحل</p>
             <div class="process-steps">
-                
                 <div class="step">
-                    <div class="step-header">
-                        <div class="step-icon">1</div>
-                        <h4>التشخيص</h4>
-                    </div>
+                    <div class="step-header"><div class="step-icon">1</div><h4>التشخيص</h4></div>
                     <ul>
                         <li>تقييم SIRI وزيارات ميدانية</li>
                         <li>جمع البيانات والتحليل التشغيلي</li>
                         <li>تسجيل النضج عبر 16 بعداً</li>
                     </ul>
                 </div>
-
                 <div class="step">
-                    <div class="step-header">
-                        <div class="step-icon">2</div>
-                        <h4>تصميم الاستراتيجية</h4>
-                    </div>
+                    <div class="step-header"><div class="step-icon">2</div><h4>تصميم الاستراتيجية</h4></div>
                     <ul>
                         <li>تحديد مستوى النضج المستهدف</li>
                         <li>مخطط البنية التقنية</li>
-                        <li>خارطة طريق التحول ذات الأولوية</li>
-                        <li>تخطيط الميزانية (CAPEX و OPEX)</li>
+                        <li>خارطة طريق التحول</li>
                     </ul>
                 </div>
-
                 <div class="step">
-                    <div class="step-header">
-                        <div class="step-icon">3</div>
-                        <h4>دعم التنفيذ</h4>
-                    </div>
+                    <div class="step-header"><div class="step-icon">3</div><h4>دعم التنفيذ</h4></div>
                     <ul>
-                        <li>اختيار الموردين والإشراف على التنفيذ</li>
+                        <li>اختيار الموردين والإشراف</li>
                         <li>إدارة التغيير والتدريب</li>
-                        <li>إنشاء مؤشرات الأداء (KPIs) والحوكمة</li>
+                        <li>إنشاء مؤشرات الأداء (KPIs)</li>
                     </ul>
                 </div>
-
                 <div class="step">
-                    <div class="step-header">
-                        <div class="step-icon">4</div>
-                        <h4>المراقبة والتحسين</h4>
-                    </div>
+                    <div class="step-header"><div class="step-icon">4</div><h4>المراقبة</h4></div>
                     <ul>
-                        <li>إعادة تقييم النضج بشكل دوري</li>
+                        <li>إعادة تقييم النضج دورياً</li>
                         <li>تدقيق التنفيذ</li>
                         <li>دورات التحسين المستمر</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </section>
@@ -481,11 +493,11 @@
         <div class="container v2030-layout animate-on-scroll">
             <div style="flex: 1;">
                 <h2>المواءمة مع رؤية المملكة 2030</h2>
-                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية. تساعد خدماتنا المصانع في الوصول إلى البرامج الحكومية والتمويل من خلال توفير تقييمات منظمة وخطط تنفيذية.</p>
+                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية.</p>
                 <ul class="v2030-list">
                     <li><i class="fas fa-check"></i> تعزيز الإنتاجية والكفاءة التشغيلية</li>
                     <li><i class="fas fa-check"></i> توطين التقنيات المتقدمة</li>
-                    <li><i class="fas fa-check"></i> دعم المصانع الصغيرة والمتوسطة في الثورة الصناعية الرابعة</li>
+                    <li><i class="fas fa-check"></i> دعم المصانع الصغيرة والمتوسطة</li>
                     <li><i class="fas fa-check"></i> رفع التنافسية الوطنية</li>
                     <li><i class="fas fa-check"></i> تقليل الهدر وتحسين الاستدامة</li>
                     <li><i class="fas fa-check"></i> زيادة جاهزية التصدير</li>
@@ -508,12 +520,10 @@
         </div>
         <div class="contact-form">
             <h2 style="color: var(--brand-dark);">طلب مشروع</h2>
-            
             <form id="inquiryForm" onsubmit="sendEmail(event)">
                 <input type="text" id="name" class="form-field" placeholder="الاسم الكامل" required>
                 <input type="text" id="company" class="form-field" placeholder="اسم الشركة / المصنع" required>
                 <input type="email" id="email" class="form-field" placeholder="البريد الإلكتروني" required>
-                
                 <select id="service" class="form-field" required>
                     <option value="">اختر الخدمة المطلوبة...</option>
                     <option value="SIRI Assessment">تقييم SIRI</option>
@@ -522,11 +532,9 @@
                     <option value="Asset Management">إدارة الأصول</option>
                     <option value="General Inquiry">استفسار عام</option>
                 </select>
-                
                 <textarea id="message" class="form-field" rows="4" placeholder="اكتب وصفاً مختصراً لمتطلبات مشروعك..." required></textarea>
                 <button type="submit" class="btn-primary" style="width: 100%;">إرسال الطلب</button>
             </form>
-            <p style="font-size: 12px; margin-top: 10px; color: #888;">* الضغط على إرسال سيقوم بفتح تطبيق البريد الإلكتروني الخاص بك.</p>
         </div>
     </section>
 
@@ -558,7 +566,6 @@
 
         function sendEmail(event) {
             event.preventDefault(); 
-
             const name = document.getElementById('name').value;
             const company = document.getElementById('company').value;
             const service = document.getElementById('service').value;

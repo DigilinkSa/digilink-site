@@ -169,15 +169,39 @@
         .feature-card { padding: 30px; border: 1px solid #eee; border-radius: 8px; }
         .feature-icon { font-size: 2.5rem; color: var(--brand-green); margin-bottom: 20px; }
 
-        /* Services Grid */
-        .services { padding: 80px 0; background: #1a1a1a; color: white; }
+        /* Services Grid (FIXED CONTRAST) */
+        .services { padding: 80px 0; background: #1B2428; color: white; } 
+        
+        /* Force the Heading to be White */
+        .services h2 { 
+            color: #ffffff !important; 
+            text-align: center; 
+            margin-bottom: 60px; 
+        }
+
         .service-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        .service-item { background: rgba(255,255,255,0.05); padding: 30px; display: flex; gap: 20px; }
+        
+        .service-item { 
+            background: rgba(255, 255, 255, 0.08); 
+            padding: 30px; 
+            display: flex; 
+            gap: 20px;
+            border: 1px solid rgba(255,255,255,0.1); 
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.12); 
+            transform: translateY(-5px);
+        }
+
         .service-graphic { font-size: 2.5rem; color: var(--brand-green); min-width: 50px; }
-        .service-content ul { padding-left: 20px; color: #ccc; }
+        .service-content h3 { margin-top: 0; color: #fff; }
+        .service-content ul { padding-left: 20px; color: #f4f4f4; line-height: 1.7; } 
 
         /* Sectors Grid */
         .sectors { padding: 80px 0; background: var(--brand-green); text-align: center; color: white; }
+        .sectors h4 { color: white; margin-bottom: 40px; font-size: 2rem; }
         .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .sector-card { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 8px; }
 
