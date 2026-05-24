@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiLink | Industrial Consulting & SIRI Assessment</title>
+    <title>DigiLink | Industrial Consulting, SIRI & AIMRI Assessment</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,6 +152,97 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(58, 125, 66, 0.4);
         }
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 16px 34px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            border: 2px solid rgba(255,255,255,0.9);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--brand-dark);
+        }
+
+        /* Assessment Programs */
+        .assessments {
+            padding: 90px 0;
+            background: var(--brand-light);
+        }
+
+        .assessment-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 45px;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .assessment-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            border-top: 6px solid var(--brand-green);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .assessment-badge {
+            display: inline-block;
+            background: rgba(58, 125, 66, 0.12);
+            color: var(--brand-green);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .assessment-card ul {
+            padding-left: 20px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .assessment-card li {
+            margin-bottom: 8px;
+        }
+
+        .assessment-link {
+            display: inline-block;
+            color: var(--brand-green);
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .assessment-link:hover {
+            text-decoration: underline;
+        }
 
         /* --- 4. SECTIONS & GRIDS --- */
         .partners { padding: 50px 0; background: #fff; text-align: center; }
@@ -249,6 +340,7 @@
             .split-layout, 
             .features-grid, 
             .service-container, 
+            .assessment-grid,
             .process-steps, 
             .contact, 
             .v2030-layout,
@@ -286,6 +378,7 @@
                     <li><a href="#about" onclick="toggleMenu()">About</a></li>
                     <li><a href="#why" onclick="toggleMenu()">Why DigiLink</a></li>
                     <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                    <li><a href="#assessments" onclick="toggleMenu()">Assessments</a></li>
                     <li><a href="#sectors" onclick="toggleMenu()">Sectors</a></li>
                     <li><a href="ar.html" class="lang-switch">العربية</a></li>
                     <li><a href="#contact" class="btn-nav" onclick="toggleMenu()">Contact Us</a></li>
@@ -297,8 +390,11 @@
     <section class="hero">
         <div class="container hero-text animate-on-scroll">
             <h1>TRANSFORMATION <br>WITH REAL IMPACT</h1>
-            <p>Enabling Saudi factories to achieve world-class digital maturity and operational excellence through data-driven consulting.</p>
-            <a href="#contact" class="btn-primary">Book SIRI Assessment</a>
+            <p>Enabling Saudi factories to achieve world-class digital, AI, and operational maturity through data-driven consulting.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">Book an Assessment</a>
+                <a href="#assessments" class="btn-secondary">Explore SIRI & AIMRI</a>
+            </div>
         </div>
     </section>
 
@@ -321,7 +417,7 @@
             <div>
                 <h4>Company Overview</h4>
                 <h2>SAUDI-BASED INDUSTRIAL CONSULTING</h2>
-                <p>DigiLink is a specialized firm focusing on manufacturing performance, digital transformation, and Industry 4.0 strategy. With over 27 years of experience, we support factories across the Kingdom in improving operational performance and aligning with national objectives.</p>
+                <p>DigiLink is a specialized firm focusing on manufacturing performance, digital transformation, AI readiness, and Industry 4.0 strategy. With over 27 years of experience, we support factories across the Kingdom in improving operational performance, preparing for practical AI adoption, and aligning with national objectives.</p>
             </div>
             <div>
                 <div class="vision-box">
@@ -330,7 +426,7 @@
                 </div>
                 <div class="vision-box">
                     <h3><i class="fas fa-bullseye"></i> OUR MISSION</h3>
-                    <p>To provide Saudi industries with reliable, data-driven consulting services that accelerate Industry 4.0 readiness and create measurable impact.</p>
+                    <p>To provide Saudi industries with reliable, data-driven consulting services that accelerate Industry 4.0 readiness, AI maturity, and measurable operational impact.</p>
                 </div>
             </div>
         </div>
@@ -342,8 +438,8 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
-                    <h3>Certified SIRI Assessors</h3>
-                    <p>Our staff hold official Certified SIRI Assessor accreditation issued by INCIT and TÜV SÜD Middle East. This certification enables DigiLink to conduct official SIRI assessments recognized internationally and required by government programs.</p>
+                    <h3>Certified SIRI & AIMRI Assessor</h3>
+                    <p>DigiLink combines certified SIRI assessment capability with AIMRI assessor certification to help factories evaluate both smart industry readiness and AI maturity in a practical, structured, and action-oriented way.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
@@ -386,6 +482,17 @@
                     </div>
                 </div>
                 <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-brain"></i></div>
+                    <div class="service-content">
+                        <h3>AIMRI Assessment</h3>
+                        <ul>
+                            <li>AI maturity and readiness evaluation</li>
+                            <li>Data, governance, people, and technology review</li>
+                            <li>AI use-case prioritization and practical roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item">
                     <div class="service-graphic"><i class="fas fa-network-wired"></i></div>
                     <div class="service-content">
                         <h3>Digital Transformation</h3>
@@ -406,6 +513,46 @@
                             <li>Downtime reduction strategies</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="assessments" class="assessments">
+        <div class="container animate-on-scroll">
+            <div class="assessment-intro">
+                <h2>Book an Assessment</h2>
+                <p>DigiLink helps industrial companies understand where they stand today, define a realistic target maturity level, and convert assessment findings into practical transformation actions.</p>
+            </div>
+            <div class="assessment-grid">
+                <div class="assessment-card">
+                    <div>
+                        <span class="assessment-badge">Smart Industry Readiness</span>
+                        <h3>SIRI Assessment</h3>
+                        <p>A structured assessment for factories seeking to improve Industry 4.0 readiness across process, technology, and organization dimensions.</p>
+                        <ul>
+                            <li>Current maturity scoring and gap analysis</li>
+                            <li>Review across core smart manufacturing dimensions</li>
+                            <li>Transformation roadmap with prioritized initiatives</li>
+                            <li>Support for investment planning and execution alignment</li>
+                        </ul>
+                    </div>
+                    <a class="assessment-link" href="mailto:info@digilink.sa?subject=Book%20SIRI%20Assessment&body=Hello%20DigiLink,%0D%0A%0D%0AI%20would%20like%20to%20book%20a%20SIRI%20Assessment.%0D%0A%0D%0ACompany:%0D%0AContact%20Name:%0D%0APhone:%0D%0AFactory%20Location:%0D%0A">Book SIRI Assessment <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="assessment-card">
+                    <div>
+                        <span class="assessment-badge">AI Maturity Readiness</span>
+                        <h3>AIMRI Assessment</h3>
+                        <p>A practical assessment for organizations that want to evaluate their readiness to adopt artificial intelligence responsibly and convert AI opportunities into measurable business value.</p>
+                        <ul>
+                            <li>AI strategy, governance, and leadership readiness review</li>
+                            <li>Data availability, quality, integration, and ownership assessment</li>
+                            <li>People, skills, operating model, and change readiness review</li>
+                            <li>Prioritized AI use cases and implementation roadmap</li>
+                        </ul>
+                    </div>
+                    <a class="assessment-link" href="mailto:info@digilink.sa?subject=Book%20AIMRI%20Assessment&body=Hello%20DigiLink,%0D%0A%0D%0AI%20would%20like%20to%20book%20an%20AIMRI%20Assessment.%0D%0A%0D%0ACompany:%0D%0AContact%20Name:%0D%0APhone:%0D%0AIndustry:%0D%0AMain%20AI%20readiness%20objective:%0D%0A">Book AIMRI Assessment <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -435,16 +582,16 @@
                 <div class="step">
                     <div class="step-header"><div class="step-icon">1</div><h4>Diagnostic</h4></div>
                     <ul>
-                        <li>SIRI Assessment and site visits</li>
+                        <li>SIRI / AIMRI assessment and site visits</li>
                         <li>Data collection and analysis</li>
-                        <li>Maturity scoring 16 dimensions</li>
+                        <li>Maturity scoring and readiness gap analysis</li>
                     </ul>
                 </div>
                 <div class="step">
                     <div class="step-header"><div class="step-icon">2</div><h4>Strategy</h4></div>
                     <ul>
                         <li>Target maturity definition</li>
-                        <li>Technology blueprint</li>
+                        <li>Technology and AI readiness blueprint</li>
                         <li>Transformation roadmap</li>
                     </ul>
                 </div>
@@ -476,7 +623,7 @@
                 <ul class="v2030-list">
                     <li><i class="fas fa-check"></i> Enhancing productivity and efficiency</li>
                     <li><i class="fas fa-check"></i> Localizing advanced technologies</li>
-                    <li><i class="fas fa-check"></i> Supporting SMEs in Industry 4.0</li>
+                    <li><i class="fas fa-check"></i> Supporting SMEs in Industry 4.0 and AI readiness</li>
                     <li><i class="fas fa-check"></i> Raising national competitiveness</li>
                     <li><i class="fas fa-check"></i> Reducing waste & sustainability</li>
                     <li><i class="fas fa-check"></i> Increasing export readiness</li>
@@ -489,7 +636,7 @@
     <section id="contact" class="contact">
         <div class="contact-info">
             <h2>Contact Information</h2>
-            <p style="margin-bottom: 30px;">Ready to start your transformation? Contact our certified team today.</p>
+            <p style="margin-bottom: 30px;">Ready to start your transformation? Contact our certified SIRI and AIMRI assessment team today.</p>
             
             <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@digilink.sa</p>
             <p><strong><i class="fas fa-phone"></i> Mobile:</strong> +966 50 033 4664</p>
@@ -512,6 +659,8 @@
                 <select id="service" class="form-field" required>
                     <option value="">Select Service...</option>
                     <option value="SIRI Assessment">SIRI Assessment</option>
+                    <option value="AIMRI Assessment">AIMRI Assessment</option>
+                    <option value="Combined SIRI and AIMRI Assessment">Combined SIRI and AIMRI Assessment</option>
                     <option value="Feasibility Study">Feasibility Study</option>
                     <option value="Digital Transformation">Digital Transformation Strategy</option>
                     <option value="Asset Management">Asset Management</option>
@@ -525,7 +674,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 DigiLink Consulting. Transformation with Real Impact.</p>
+            <p>&copy; 2026 DigiLink Consulting. Transformation with Real Impact.</p>
         </div>
     </footer>
 
