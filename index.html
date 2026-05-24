@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiLink | Industrial Consulting, SIRI & AIMRI Assessment</title>
+    <title>DigiLink | ISO-Certified Industrial Consulting, SIRI & AIMRI Assessment</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -260,6 +260,96 @@
         .feature-card { padding: 30px; border: 1px solid #eee; border-radius: 8px; }
         .feature-icon { font-size: 2.5rem; color: var(--brand-green); margin-bottom: 20px; }
 
+        /* Certifications */
+        .certifications {
+            padding: 90px 0;
+            background: #f8f9fa;
+        }
+
+        .certifications-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 45px;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .certification-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 360px;
+        }
+
+        .certification-icon {
+            font-size: 2.4rem;
+            color: var(--brand-green);
+            margin-bottom: 18px;
+        }
+
+        .certification-standard {
+            display: inline-block;
+            background: rgba(58, 125, 66, 0.12);
+            color: var(--brand-green);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .certification-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .certification-card p {
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .certification-meta {
+            font-size: 0.88rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 10px;
+        }
+
+        .certification-link {
+            display: inline-block;
+            color: var(--brand-green);
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 16px;
+        }
+
+        .certification-link:hover {
+            text-decoration: underline;
+        }
+
+        .certification-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.92rem;
+            max-width: 900px;
+            margin: 30px auto 0;
+        }
+
         /* Services Grid (FIXED CONTRAST) */
         .services { padding: 80px 0; background: #1B2428; color: white; }
         
@@ -341,6 +431,7 @@
             .features-grid, 
             .service-container, 
             .assessment-grid,
+            .certifications-grid,
             .process-steps, 
             .contact, 
             .v2030-layout,
@@ -379,6 +470,7 @@
                     <li><a href="#why" onclick="toggleMenu()">Why DigiLink</a></li>
                     <li><a href="#services" onclick="toggleMenu()">Services</a></li>
                     <li><a href="#assessments" onclick="toggleMenu()">Assessments</a></li>
+                    <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
                     <li><a href="#sectors" onclick="toggleMenu()">Sectors</a></li>
                     <li><a href="ar.html" class="lang-switch">العربية</a></li>
                     <li><a href="#contact" class="btn-nav" onclick="toggleMenu()">Contact Us</a></li>
@@ -438,8 +530,8 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
-                    <h3>Certified SIRI & AIMRI Assessor</h3>
-                    <p>DigiLink combines certified SIRI assessment capability with AIMRI assessor certification to help factories evaluate both smart industry readiness and AI maturity in a practical, structured, and action-oriented way.</p>
+                    <h3>Certified Assessors & ISO-Certified Systems</h3>
+                    <p>DigiLink combines certified SIRI and AIMRI assessment capability with ISO-certified management systems covering quality, IT service management, and occupational health and safety. This gives clients stronger confidence in the structure, reliability, and professionalism of our consulting delivery.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
@@ -452,6 +544,61 @@
                     <p>We provide full Digital Transformation Support, from initial assessment to feasibility analysis, roadmap design, implementation support, and progress tracking.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <div class="container animate-on-scroll">
+            <div class="certifications-intro">
+                <h2>Certified Management Systems</h2>
+                <p>DigiLink operates under certified management systems that strengthen the reliability, governance, service quality, and safety of our consulting delivery. These certifications demonstrate our commitment to structured processes, continual improvement, professional service management, and responsible consulting practices in industrial environments.</p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div>
+                        <i class="fas fa-award certification-icon"></i>
+                        <span class="certification-standard">ISO 9001:2015</span>
+                        <h3>Quality Management System</h3>
+                        <p>Supports consulting quality, process discipline, documentation control, customer focus, and continual improvement across DigiLink advisory and industrial transformation services.</p>
+                        <div class="certification-meta">
+                            <strong>Certificate No.:</strong> DIG/QMS/E26/5787<br>
+                            <strong>Expiry Date:</strong> 19.05.2027
+                        </div>
+                    </div>
+                    <a class="certification-link" href="certificates/ISO9001.pdf" target="_blank">View Certificate <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="certification-card">
+                    <div>
+                        <i class="fas fa-server certification-icon"></i>
+                        <span class="certification-standard">ISO/IEC 20000-1:2018</span>
+                        <h3>IT Service Management System</h3>
+                        <p>Strengthens IT consulting, digital transformation advisory, smart manufacturing readiness support, service management, and technology-enabled delivery practices.</p>
+                        <div class="certification-meta">
+                            <strong>Certificate No.:</strong> PDCA/ITSMS/E26/11012<br>
+                            <strong>Expiry Date:</strong> 21.05.2027
+                        </div>
+                    </div>
+                    <a class="certification-link" href="certificates/ISO20000.pdf" target="_blank">View Certificate <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="certification-card">
+                    <div>
+                        <i class="fas fa-shield-alt certification-icon"></i>
+                        <span class="certification-standard">ISO 45001:2018</span>
+                        <h3>Occupational Health & Safety Management System</h3>
+                        <p>Reflects DigiLink's commitment to safe, controlled, and responsible consulting practices when supporting industrial clients and factory environments.</p>
+                        <div class="certification-meta">
+                            <strong>Certificate No.:</strong> DIG/OHS/E26/3812<br>
+                            <strong>Expiry Date:</strong> 19.05.2027
+                        </div>
+                    </div>
+                    <a class="certification-link" href="certificates/ISO45001.pdf" target="_blank">View Certificate <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <p class="certification-note">Certificate validity is subject to annual surveillance audits and verification through the issuing certification body. DigiLink's ISO certifications apply to its management systems and consulting delivery processes.</p>
         </div>
     </section>
 
@@ -675,6 +822,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 DigiLink Consulting. Transformation with Real Impact.</p>
+            <p>ISO 9001:2015 | ISO/IEC 20000-1:2018 | ISO 45001:2018 Certified</p>
         </div>
     </footer>
 
