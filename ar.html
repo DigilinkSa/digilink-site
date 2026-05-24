@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ديجي لينك | استشارات صناعية وتقييمات SIRI و AIMRI</title>
+    <title>ديجي لينك | استشارات صناعية، تقييمات SIRI و AIMRI، وشهادات ISO</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,6 +242,83 @@
             text-decoration: underline;
         }
 
+
+        /* ISO Certifications */
+        .certifications {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .certification-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 45px;
+        }
+
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .certification-card {
+            background: var(--brand-light);
+            padding: 32px;
+            border-radius: 10px;
+            border-top: 6px solid var(--brand-green);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+        }
+
+        .certification-card i {
+            font-size: 2.4rem;
+            color: var(--brand-green);
+            margin-bottom: 18px;
+        }
+
+        .certification-card h3 {
+            margin-top: 0;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .certification-card p {
+            margin-bottom: 12px;
+        }
+
+        .cert-number {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--brand-dark);
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 20px;
+            direction: ltr;
+            margin: 8px 0 16px;
+        }
+
+        .certificate-link {
+            display: inline-block;
+            color: var(--brand-green);
+            font-weight: 800;
+            font-family: 'Cairo', sans-serif;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .certificate-link:hover {
+            text-decoration: underline;
+        }
+
+        .certification-note {
+            margin-top: 30px;
+            padding: 18px 24px;
+            background: rgba(58, 125, 66, 0.08);
+            border-right: 5px solid var(--brand-green);
+            font-size: 0.95rem;
+        }
+
         /* --- 5. SECTIONS & GRIDS --- */
         .partners { padding: 50px 0; background: #fff; text-align: center; }
         .logo-grid { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
@@ -357,6 +434,7 @@
             .features-grid, 
             .service-container, 
             .assessment-grid,
+            .certification-grid,
             .process-steps, 
             .contact, 
             .v2030-layout,
@@ -399,6 +477,7 @@
                     <li><a href="#why" onclick="toggleMenu()">لماذا ديجي لينك؟</a></li>
                     <li><a href="#services" onclick="toggleMenu()">خدماتنا</a></li>
                     <li><a href="#assessments" onclick="toggleMenu()">التقييمات</a></li>
+                    <li><a href="#certifications" onclick="toggleMenu()">الشهادات</a></li>
                     <li><a href="#sectors" onclick="toggleMenu()">القطاعات</a></li>
                     <li><a href="index.html" class="lang-switch">English</a></li>
                     <li><a href="#contact" class="btn-nav" onclick="toggleMenu()">تواصل معنا</a></li>
@@ -458,8 +537,8 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
-                    <h3>مقيم معتمد لـ SIRI و AIMRI</h3>
-                    <p>تجمع ديجي لينك بين الاعتماد في تقييم SIRI وخبرة تقييم AIMRI لمساعدة المصانع والمنشآت على قياس جاهزية الصناعة الذكية ونضج الذكاء الاصطناعي بطريقة عملية ومنظمة وقابلة للتحويل إلى خطط تنفيذية.</p>
+                    <h3>مقيم معتمد وأنظمة إدارة حاصلة على ISO</h3>
+                    <p>تجمع ديجي لينك بين الاعتماد في تقييمات SIRI و AIMRI وأنظمة إدارة معتمدة وفق ISO 9001 و ISO/IEC 20000-1 و ISO 45001، مما يمنح العملاء ثقة أعلى في جودة التنفيذ، وانضباط العمليات، وإدارة الخدمات، والسلامة المهنية.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
@@ -471,6 +550,48 @@
                     <h3>دعم شامل من البداية للنهاية</h3>
                     <p>نقدم دعماً كاملاً للتحول الرقمي، بدءاً من التقييم الأولي ودراسة الجدوى، مروراً بتصميم خارطة الطريق، وصولاً إلى دعم التنفيذ وتتبع التقدم.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <div class="container animate-on-scroll">
+            <div class="certification-intro">
+                <h2>أنظمة إدارة معتمدة</h2>
+                <p>تعمل ديجي لينك وفق أنظمة إدارة معتمدة تعزز موثوقية الخدمات الاستشارية، وجودة التسليم، وحوكمة خدمات تقنية المعلومات، والالتزام بممارسات السلامة والصحة المهنية في بيئات العمل الصناعية.</p>
+            </div>
+
+            <div class="certification-grid">
+                <div class="certification-card">
+                    <i class="fas fa-award"></i>
+                    <h3>ISO 9001:2015</h3>
+                    <h4>نظام إدارة الجودة</h4>
+                    <span class="cert-number">DIG/QMS/E26/5787</span>
+                    <p>يعزز جودة الخدمات الاستشارية، وانضباط الإجراءات، وإدارة متطلبات العملاء، والتحسين المستمر في تقديم خدمات التحول الصناعي والدراسات والتقييمات.</p>
+                    <a class="certificate-link" href="certificates/ISO9001.pdf" target="_blank">عرض الشهادة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="certification-card">
+                    <i class="fas fa-server"></i>
+                    <h3>ISO/IEC 20000-1:2018</h3>
+                    <h4>نظام إدارة خدمات تقنية المعلومات</h4>
+                    <span class="cert-number">PDCA/ITSMS/E26/11012</span>
+                    <p>يدعم تقديم خدمات استشارية تقنية ومنهجية في التحول الرقمي، وإدارة الخدمات، واستشارات الأنظمة والبيانات، وإدارة مشاريع تقنية المعلومات.</p>
+                    <a class="certificate-link" href="certificates/ISO20000.pdf" target="_blank">عرض الشهادة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="certification-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>ISO 45001:2018</h3>
+                    <h4>نظام إدارة السلامة والصحة المهنية</h4>
+                    <span class="cert-number">DIG/OHS/E26/3812</span>
+                    <p>يعكس التزام ديجي لينك بتطبيق ممارسات آمنة ومنظمة عند تقديم الخدمات الاستشارية في البيئات الصناعية ومواقع المصانع.</p>
+                    <a class="certificate-link" href="certificates/ISO45001.pdf" target="_blank">عرض الشهادة <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+
+            <div class="certification-note">
+                <strong>ملاحظة:</strong> تخضع صلاحية الشهادات لعمليات المراجعة الدورية والمراقبة السنوية والتحقق من جهة الإصدار.
             </div>
         </div>
     </section>
@@ -716,6 +837,7 @@
     <footer>
         <div class="container">
             <p>جميع الحقوق محفوظة © 2026 ديجي لينك للاستشارات.</p>
+            <p>ISO 9001:2015 | ISO/IEC 20000-1:2018 | ISO 45001:2018 معتمدة</p>
         </div>
     </footer>
 
@@ -748,6 +870,7 @@
             const name = document.getElementById('name').value;
             const company = document.getElementById('company').value;
             const service = document.getElementById('service').value;
+            const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             const reqNumber = Math.floor(1000 + Math.random() * 9000);
 
