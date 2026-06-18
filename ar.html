@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ديجي لينك | استشارات صناعية، تقييمات SIRI و AIMRI، وشهادات ISO</title>
+    <title>ديجي لينك | التحول الرقمي، جاهزية الذكاء الاصطناعي، تقييمات SIRI و AIMRI</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,6 +242,111 @@
             text-decoration: underline;
         }
 
+        /* Future Factory Transformation */
+        .hero-proof {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin: 26px 0 36px;
+        }
+
+        .proof-pill {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            padding: 10px 14px;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .neutrality-note {
+            max-width: 900px;
+            margin: 18px auto 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .future-factory {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .future-intro {
+            text-align: center;
+            max-width: 980px;
+            margin: 0 auto 45px;
+        }
+
+        .future-intro p {
+            font-size: 1.08rem;
+            color: #555;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 35px;
+        }
+
+        .transformation-card {
+            background: var(--brand-light);
+            border-radius: 10px;
+            padding: 28px;
+            border: 1px solid #e9ecef;
+            min-height: 250px;
+        }
+
+        .transformation-card i {
+            color: var(--brand-green);
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+
+        .transformation-card h3 {
+            margin-top: 0;
+            font-size: 1.08rem;
+        }
+
+        .outcome-strip {
+            margin-top: 45px;
+            background: var(--brand-dark);
+            color: #fff;
+            border-radius: 12px;
+            padding: 34px;
+        }
+
+        .outcome-strip h3 {
+            color: #fff;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .outcome-item {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            padding: 18px;
+            text-align: center;
+            font-size: 0.94rem;
+        }
+
+        .methodology-note {
+            margin-top: 35px;
+            background: rgba(58, 125, 66, 0.1);
+            border-right: 5px solid var(--brand-green);
+            padding: 24px;
+            border-radius: 8px;
+        }
+
 
         /* ISO Certifications */
         .certifications {
@@ -389,12 +494,12 @@
         .step-icon { width: 50px; height: 50px; background: var(--brand-dark); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
         .step ul { padding-right: 20px; padding-left: 0; font-size: 0.9rem; color: #666; }
 
-        /* Vision 2030 */
-        .v2030 { padding: 80px 0; background: #f8f9fa; }
-        .v2030-layout { display: flex; align-items: center; gap: 50px; }
-        .v2030-img { width: 200px; }
-        .v2030-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding: 0; }
-        .v2030-list li i { color: var(--brand-green); margin-left: 10px; } 
+        /* Vision ٢٠٣٠ */
+        .v٢٠٣٠ { padding: 80px 0; background: #f8f9fa; }
+        .v٢٠٣٠-layout { display: flex; align-items: center; gap: 50px; }
+        .v٢٠٣٠-img { width: 200px; }
+        .v٢٠٣٠-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding: 0; }
+        .v٢٠٣٠-list li i { color: var(--brand-green); margin-left: 10px; } 
 
         /* Contact */
         .contact { display: grid; grid-template-columns: 1fr 1.5fr; }
@@ -435,10 +540,12 @@
             .service-container, 
             .assessment-grid,
             .certification-grid,
+            .transformation-grid,
+            .outcome-grid,
             .process-steps, 
             .contact, 
-            .v2030-layout,
-            .v2030-list { 
+            .v٢٠٣٠-layout,
+            .v٢٠٣٠-list { 
                 grid-template-columns: 1fr !important;
                 display: grid;
                 gap: 30px;
@@ -448,7 +555,7 @@
             .step { text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; }
             .step ul { text-align: right; display: inline-block; }
 
-            .v2030-layout { flex-direction: column-reverse; }
+            .v٢٠٣٠-layout { flex-direction: column-reverse; }
             
             /* 4. Adjust Hero Text */
             .hero-text h1 { font-size: 2.2rem; }
@@ -474,6 +581,7 @@
 
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#about" onclick="toggleMenu()">عن الشركة</a></li>
+                    <li><a href="#future-factory" onclick="toggleMenu()">مصانع المستقبل</a></li>
                     <li><a href="#why" onclick="toggleMenu()">لماذا ديجي لينك؟</a></li>
                     <li><a href="#services" onclick="toggleMenu()">خدماتنا</a></li>
                     <li><a href="#assessments" onclick="toggleMenu()">التقييمات</a></li>
@@ -488,18 +596,24 @@
 
     <section class="hero">
         <div class="container hero-text animate-on-scroll">
-            <h1>تحول ذو أثر حقيقي</h1>
-            <p>تمكين المصانع السعودية من تحقيق النضج الرقمي، وجاهزية الذكاء الاصطناعي، والتميز التشغيلي المستدام من خلال استشارات قائمة على البيانات.</p>
+            <h1>مصانع أذكى. أثر قابل للقياس.</h1>
+            <p>نساعد المصانع السعودية على رفع النضج الرقمي، تبني الذكاء الاصطناعي بشكل عملي، أتمتة الأعمال المتكررة، تقليل الاعتماد على العمل اليدوي منخفض المهارة، وتحسين الإنتاجية والاعتمادية.</p>
+            <div class="hero-proof">
+                <span class="proof-pill">تقييم SIRI</span>
+                <span class="proof-pill">تقييم AIMRI</span>
+                <span class="proof-pill">أتمتة ورقمنة العمليات</span>
+                <span class="proof-pill">تحسين الاعتمادية والصيانة</span>
+            </div>
             <div class="hero-actions">
-                <a href="#contact" class="btn-primary">احجز تقييماً</a>
-                <a href="#assessments" class="btn-secondary">استكشف SIRI و AIMRI</a>
+                <a href="#contact" class="btn-primary">ابدأ رحلة التحول</a>
+                <a href="#future-factory" class="btn-secondary">استكشف منهجية مصنع المستقبل</a>
             </div>
         </div>
     </section>
 
     <div class="partners animate-on-scroll">
         <div class="container">
-            <p>الأنظمة والتقنيات المدعومة</p>
+            <p>منظومات تقنية يمكن مواءمتها حسب احتياج المصنع</p>
             <div class="logo-grid">
                 <img src="odoo.png" alt="Odoo" class="partner-img">
                 <img src="Sap.png" alt="SAP" class="partner-img">
@@ -508,6 +622,7 @@
                 <img src="Oracle.png" alt="Oracle" class="partner-img">
                 <img src="zoho.png" alt="ZOHO" class="partner-img">
             </div>
+            <p class="neutrality-note">ديجي لينك ليست مقيدة بمنصة تقنية واحدة. نبدأ بفهم فجوات المصنع، ثم نساعده على اختيار الحل الأنسب، سواء كان نظام تخطيط موارد، نظام تنفيذ تصنيع، إدارة صيانة، ربط آلات، لوحات مؤشرات، أو تحسين إجراءات قبل الاستثمار التقني.</p>
         </div>
     </div>
 
@@ -516,41 +631,119 @@
             <div>
                 <h4>نظرة عامة</h4>
                 <h2>استشارات صناعية سعودية</h2>
-                <p>ديجي لينك هي شركة استشارات صناعية مقرها السعودية متخصصة في أداء التصنيع، والتحول الرقمي، وجاهزية الذكاء الاصطناعي، واستراتيجيات الثورة الصناعية الرابعة، وتقييم مؤشر الجاهزية للصناعة الذكية SIRI وتقييم AIMRI. بخبرة تزيد عن 27 عاماً في التصنيع والصيانة والموثوقية، تدعم ديجي لينك المصانع في جميع أنحاء المملكة لتحسين الأداء التشغيلي، والاستعداد العملي لتبني الذكاء الاصطناعي، والمواءمة مع أهداف رؤية المملكة 2030 الصناعية.</p>
+                <p>ديجي لينك شركة استشارات صناعية سعودية متخصصة في أداء التصنيع، التحول الرقمي، جاهزية الذكاء الاصطناعي، الأتمتة، تحسين الاعتمادية، وتطوير خارطة تحول عملية للمصانع. بخبرة تتجاوز ٢٧ عاماً في التصنيع والصيانة والاعتمادية، نساعد المصانع على الانتقال من التشغيل اليدوي المتفرق إلى تشغيل رقمي مترابط، قابل للقياس، ومبني على البيانات.</p>
             </div>
             <div>
                 <div class="vision-box">
                     <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
-                    <p>أن نكون الشريك الرائد في تمكين المصانع السعودية من تحقيق النضج الرقمي العالمي والتميز التشغيلي المستدام.</p>
+                    <p>أن نكون الشريك الصناعي الموثوق لتمكين المصانع السعودية من بناء عمليات رقمية ذكية، إنتاجية أعلى، واعتمادية تشغيلية مستدامة.</p>
                 </div>
                 <div class="vision-box">
                     <h3><i class="fas fa-bullseye"></i> رسالتنا</h3>
-                    <p>تزويد الصناعات السعودية بخدمات استشارية موثوقة وقائمة على البيانات وفق معايير عالمية لتسريع جاهزيتها للثورة الصناعية الرابعة، ورفع نضجها في الذكاء الاصطناعي، وإحداث أثر تحولي ملموس.</p>
+                    <p>تقديم خدمات استشارية صناعية قائمة على البيانات تساعد المصانع على رفع النضج الرقمي، تبني الذكاء الاصطناعي بمسؤولية، أتمتة الأعمال المتكررة، وتحسين الأداء التشغيلي من خلال مبادرات عملية قابلة للتنفيذ والقياس.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="future-factory" class="future-factory">
+        <div class="container animate-on-scroll">
+            <div class="future-intro">
+                <h2>التحول الرقمي وجاهزية الذكاء الاصطناعي لمصانع المستقبل</h2>
+                <p>تركز ديجي لينك على بناء مصنع أكثر ذكاءً وإنتاجية وقدرة على المنافسة من خلال رفع وضوح العمليات، تحسين جودة البيانات، أتمتة الأعمال المتكررة، تقليل الاعتماد على العمل اليدوي منخفض المهارة، وتحويل القوى العاملة نحو التشغيل الرقمي والتحليل والتحسين المستمر.</p>
+            </div>
+
+            <div class="transformation-grid">
+                <div class="transformation-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>وضوح العمليات رقمياً</h3>
+                    <p>تحويل البيانات التشغيلية من سجلات متفرقة ومتابعة يدوية إلى مؤشرات رقمية تساعد الإدارة على رؤية الإنتاج، الجودة، التوقفات، المخزون، والصيانة بشكل أدق.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>جاهزية الذكاء الاصطناعي قبل التطبيق</h3>
+                    <p>مراجعة جودة البيانات، تكامل الأنظمة، الحوكمة، المهارات، وحالات الاستخدام لضمان أن تطبيقات الذكاء الاصطناعي مبنية على أساس تشغيلي وبياني صحيح.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>أتمتة الأعمال المتكررة</h3>
+                    <p>تحديد الأنشطة اليدوية المتكررة ومنخفضة المهارة التي يمكن رقمنتها أو أتمتتها بهدف رفع الإنتاجية، تقليل الأخطاء، وتحسين سرعة اتخاذ القرار.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>تحسين الاعتمادية وتقليل التوقفات</h3>
+                    <p>ربط التحول الرقمي بمشاكل المصنع الحقيقية مثل توقف المعدات، ضعف بيانات الأعطال، إدارة الصيانة الوقائية، توفر قطع الغيار، والتنسيق بين الإنتاج والصيانة.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>رفع مهارات القوى العاملة</h3>
+                    <p>نقل دور العاملين من التسجيل اليدوي والمتابعة التفاعلية إلى تشغيل الأنظمة، مراقبة المعدات، تحليل البيانات، حل المشكلات، والمشاركة في التحسين المستمر.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-route"></i>
+                    <h3>خارطة تحول عملية</h3>
+                    <p>ترتيب المبادرات حسب القيمة التشغيلية، الجاهزية، سهولة التنفيذ، المخاطر، والأثر المتوقع على الإنتاجية والجودة والاعتمادية والاستدامة.</p>
+                </div>
+            </div>
+
+            <div class="outcome-strip">
+                <h3>مخرجات التحول التي تركز عليها ديجي لينك</h3>
+                <div class="outcome-grid">
+                    <div class="outcome-item">إنتاجية أعلى</div>
+                    <div class="outcome-item">توقفات أقل</div>
+                    <div class="outcome-item">هدر وأخطاء أقل</div>
+                    <div class="outcome-item">بيانات تشغيلية أفضل</div>
+                    <div class="outcome-item">قوى عاملة أعلى مهارة</div>
+                </div>
+            </div>
+
+            <div class="methodology-note">
+                <strong>منهجيتنا:</strong> لا نبدأ ببيع برنامج أو منصة. نبدأ بتشخيص المصنع، فهم مصادر الفاقد، تحديد فجوات البيانات والأنظمة والمهارات، ثم بناء خارطة تحول محايدة تقنياً تقود إلى نتائج تشغيلية قابلة للقياس.
+            </div>
+        </div>
+    </section>
+
 
     <section id="why" class="why-digilink">
         <div class="container animate-on-scroll">
             <h2 style="text-align: center;">لماذا تختار ديجي لينك؟</h2>
             <div class="features-grid">
                 <div class="feature-card">
+                    <i class="fas fa-balance-scale feature-icon"></i>
+                    <h3>استشارات محايدة تقنياً</h3>
+                    <p>لا نفرض منصة واحدة على العميل. نحدد الحل الأنسب بناءً على فجوات المصنع، جاهزية البيانات، طبيعة العمليات، وقدرة الفريق على التشغيل والاستدامة.</p>
+                </div>
+                <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
-                    <h3>مقيم معتمد وأنظمة إدارة حاصلة على ISO</h3>
-                    <p>تجمع ديجي لينك بين الاعتماد في تقييمات SIRI و AIMRI وأنظمة إدارة معتمدة وفق ISO 9001 و ISO/IEC 20000-1 و ISO 45001، مما يمنح العملاء ثقة أعلى في جودة التنفيذ، وانضباط العمليات، وإدارة الخدمات، والسلامة المهنية.</p>
+                    <h3>قدرات SIRI و AIMRI</h3>
+                    <p>نربط تقييم جاهزية الصناعة الذكية مع تقييم جاهزية الذكاء الاصطناعي حتى تكون مبادرات التحول والذكاء الاصطناعي واقعية ومبنية على أساس تشغيلي وبياني صحيح.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
-                    <h3>خبرة محلية عميقة</h3>
-                    <p>مع أكثر من 27 عاماً في التصنيع والصيانة، نطبق منهجيات محسنة للمصانع السعودية—خاصة المصانع الصغيرة والمتوسطة التي تسعى لتحسينات سريعة وفعالة من حيث التكلفة.</p>
+                    <h3>خبرة صناعية عميقة</h3>
+                    <p>أكثر من ٢٧ عاماً في التصنيع والصيانة والاعتمادية تمنحنا قدرة على فهم المصنع من أرضية الإنتاج، وليس من منظور تقني فقط.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-project-diagram feature-icon"></i>
-                    <h3>دعم شامل من البداية للنهاية</h3>
-                    <p>نقدم دعماً كاملاً للتحول الرقمي، بدءاً من التقييم الأولي ودراسة الجدوى، مروراً بتصميم خارطة الطريق، وصولاً إلى دعم التنفيذ وتتبع التقدم.</p>
+                    <i class="fas fa-gauge-high feature-icon"></i>
+                    <h3>من التقييم إلى الأثر</h3>
+                    <p>نحول نتائج التقييم إلى مبادرات واضحة، مؤشرات أداء، أولويات تنفيذ، ومسؤوليات متابعة تساعد المصنع على تحقيق أثر ملموس.</p>
                 </div>
-            </div>
+                <div class="feature-card">
+                    <i class="fas fa-tools feature-icon"></i>
+                    <h3>تركيز على الاعتمادية والصيانة</h3>
+                    <p>نربط التحول الرقمي بتقليل التوقفات، تحسين الصيانة الوقائية، رفع جاهزية المعدات، وتحسين التنسيق بين الإنتاج والصيانة.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>حوكمة تسليم معتمدة</h3>
+                    <p>تدعم شهادات ISO 9001 و ISO/IEC 20000-1 و ISO 45001 جودة التسليم، إدارة الخدمات، والسلامة المهنية في بيئات العمل الصناعية.</p>
+                </div>
+</div>
         </div>
     </section>
 
@@ -605,9 +798,9 @@
                     <div class="service-content">
                         <h3>دراسات الجدوى</h3>
                         <ul>
-                            <li>دراسات إنشاء مصانع جديدة</li>
-                            <li>تحليل تطوير خطوط الإنتاج القائمة</li>
-                            <li>النمذجة المالية للتمويل الحكومي (الصندوق الصناعي)</li>
+                            <li>دراسات إنشاء مصانع جديدة وتوسعة المصانع القائمة</li>
+                            <li>تحليل الطاقة الإنتاجية، التكاليف، العائد، والمخاطر</li>
+                            <li>النمذجة المالية لتقييم الجدوى والعائد الاستثماري</li>
                         </ul>
                     </div>
                 </div>
@@ -616,9 +809,9 @@
                     <div class="service-content">
                         <h3>تقييم SIRI المعتمد</h3>
                         <ul>
-                            <li>تقييم معتمد رسمياً</li>
-                            <li>تقييم العمليات، التكنولوجيا، والتنظيم</li>
-                            <li>تقارير مقارنة مع المعايير العالمية</li>
+                            <li>تقييم جاهزية الصناعة الذكية عبر العمليات والتقنية والتنظيم</li>
+                            <li>تحليل فجوات النضج الرقمي والربط بين الأنظمة والعمليات</li>
+                            <li>خارطة تحول ذات أولويات واضحة وقابلة للتنفيذ</li>
                         </ul>
                     </div>
                 </div>
@@ -628,34 +821,45 @@
                         <h3>تقييم AIMRI</h3>
                         <ul>
                             <li>تقييم نضج وجاهزية الذكاء الاصطناعي</li>
-                            <li>مراجعة البيانات، الحوكمة، الكفاءات، والتقنية</li>
-                            <li>تحديد حالات استخدام الذكاء الاصطناعي وخارطة طريق عملية</li>
+                            <li>مراجعة البيانات، الحوكمة، المهارات، التقنية، وحالات الاستخدام</li>
+                            <li>خارطة طريق عملية لتطبيقات الذكاء الاصطناعي ذات القيمة الأعلى</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-item">
-                    <div class="service-graphic"><i class="fas fa-network-wired"></i></div>
+                    <div class="service-graphic"><i class="fas fa-robot"></i></div>
                     <div class="service-content">
-                        <h3>التحول الرقمي</h3>
+                        <h3>التحول الرقمي والأتمتة</h3>
                         <ul>
-                            <li>مخططات البنية التحتية التقنية</li>
-                            <li>تخطيط النفقات الرأسمالية والتشغيلية (CAPEX/OPEX)</li>
-                            <li>استراتيجية التكامل (ERP, IoT, MES)</li>
+                            <li>رقمنة إجراءات الإنتاج والجودة والصيانة والمخزون</li>
+                            <li>تحديد فرص أتمتة الأعمال اليدوية المتكررة ومنخفضة المهارة</li>
+                            <li>استراتيجية تكامل الأنظمة مثل ERP و MES و IoT و CMMS</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-item">
                     <div class="service-graphic"><i class="fas fa-cogs"></i></div>
                     <div class="service-content">
-                        <h3>إدارة الأصول</h3>
+                        <h3>إدارة الأصول والاعتمادية</h3>
                         <ul>
-                            <li>الصيانة المرتكزة على الموثوقية (RCM)</li>
-                            <li>تحليل الكفاءة التشغيلية</li>
-                            <li>استراتيجيات تقليل فترات التوقف</li>
+                            <li>الصيانة المرتكزة على الاعتمادية وتحسين الصيانة الوقائية</li>
+                            <li>تحليل الكفاءة التشغيلية والتوقفات وأسباب الفاقد</li>
+                            <li>ربط مؤشرات الصيانة والإنتاج بلوحات أداء عملية</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+                <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-route"></i></div>
+                    <div class="service-content">
+                        <h3>خارطة مصنع المستقبل</h3>
+                        <ul>
+                            <li>تحديد الوضع الحالي والمستهدف للنضج الرقمي والذكاء الاصطناعي</li>
+                            <li>ترتيب المبادرات حسب القيمة، الجاهزية، والأثر التشغيلي</li>
+                            <li>خطة تنفيذ ومؤشرات أداء لمتابعة التحول والتحسين المستمر</li>
+                        </ul>
+                    </div>
+                </div>
+</div>
         </div>
     </section>
 
@@ -663,19 +867,19 @@
         <div class="container animate-on-scroll">
             <div class="assessment-intro">
                 <h2>احجز تقييماً</h2>
-                <p>تساعد ديجي لينك المنشآت الصناعية على فهم وضعها الحالي، وتحديد مستوى النضج المستهدف، وتحويل نتائج التقييم إلى إجراءات تحول عملية قابلة للتنفيذ والقياس.</p>
+                <p>تساعد ديجي لينك المنشآت الصناعية على فهم وضعها الحالي، تحديد مستوى النضج المستهدف، وتحويل نتائج التقييم إلى مبادرات عملية ترفع الرقمنة، جاهزية الذكاء الاصطناعي، الاعتمادية، والإنتاجية.</p>
             </div>
             <div class="assessment-grid">
                 <div class="assessment-card">
                     <div>
                         <span class="assessment-badge">جاهزية الصناعة الذكية</span>
                         <h3>تقييم SIRI</h3>
-                        <p>تقييم منظم للمصانع التي تسعى إلى رفع جاهزيتها للثورة الصناعية الرابعة عبر أبعاد العمليات، والتقنية، والتنظيم.</p>
+                        <p>تقييم منظم للمصانع التي تسعى إلى رفع جاهزيتها للصناعة الذكية عبر أبعاد العمليات، التقنية، والتنظيم، مع تحويل النتائج إلى خارطة تحول عملية.</p>
                         <ul>
                             <li>تحديد مستوى النضج الحالي وتحليل الفجوات</li>
                             <li>مراجعة أبعاد التصنيع الذكي الأساسية</li>
                             <li>خارطة طريق تحول ذات أولويات واضحة</li>
-                            <li>دعم قرارات الاستثمار ومواءمة التنفيذ</li>
+                            <li>ربط المبادرات بمؤشرات إنتاجية واعتمادية وتحسين تشغيل</li>
                         </ul>
                     </div>
                     <a class="assessment-link" href="mailto:info@digilink.sa?subject=%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20SIRI&body=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AF%D9%8A%D8%AC%D9%8A%20%D9%84%D9%8A%D9%86%D9%83%D8%8C%0A%0A%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20SIRI.%0A%0A%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9%3A%0A%D8%A7%D8%B3%D9%85%20%D9%85%D8%B3%D8%A4%D9%88%D9%84%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%3A%0A%D8%B1%D9%82%D9%85%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%0A%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D9%84%D9%85%D8%B5%D9%86%D8%B9%3A%0A">احجز تقييم SIRI <i class="fas fa-arrow-left"></i></a>
@@ -685,7 +889,7 @@
                     <div>
                         <span class="assessment-badge">جاهزية نضج الذكاء الاصطناعي</span>
                         <h3>تقييم AIMRI</h3>
-                        <p>تقييم عملي للمنشآت التي ترغب في قياس جاهزيتها لتبني الذكاء الاصطناعي بمسؤولية وتحويل فرصه إلى قيمة أعمال قابلة للقياس.</p>
+                        <p>تقييم عملي للمنشآت التي ترغب في قياس جاهزيتها لتبني الذكاء الاصطناعي بمسؤولية، بناءً على البيانات والحوكمة والمهارات وحالات الاستخدام ذات القيمة.</p>
                         <ul>
                             <li>مراجعة استراتيجية الذكاء الاصطناعي والحوكمة والقيادة</li>
                             <li>تقييم توفر البيانات وجودتها وتكاملها وملكيتها</li>
@@ -718,55 +922,55 @@
     <section id="approach" class="approach">
         <div class="container animate-on-scroll">
             <h2>منهجيتنا</h2>
-            <p>دورة تحول منظمة من 4 مراحل</p>
+            <p>دورة تحول منظمة من ٤ مراحل تركز على التشخيص، الأولويات، التنفيذ، وقياس الأثر</p>
             <div class="process-steps">
                 
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-icon">1</div>
+                        <div class="step-icon">١</div>
                         <h4>التشخيص</h4>
                     </div>
                     <ul>
                         <li>تقييمات SIRI و AIMRI وزيارات ميدانية</li>
-                        <li>جمع البيانات والتحليل التشغيلي</li>
-                        <li>تسجيل النضج الصناعي وجاهزية الذكاء الاصطناعي</li>
+                        <li>تحليل الإنتاج، الجودة، الصيانة، البيانات، والأنظمة</li>
+                        <li>تحديد فجوات النضج الرقمي وجاهزية الذكاء الاصطناعي</li>
                     </ul>
                 </div>
 
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-icon">2</div>
+                        <div class="step-icon">٢</div>
                         <h4>تصميم الاستراتيجية</h4>
                     </div>
                     <ul>
                         <li>تحديد مستوى النضج المستهدف</li>
-                        <li>مخطط البنية التقنية</li>
-                        <li>خارطة طريق التحول ذات الأولوية</li>
-                        <li>تخطيط الميزانية (CAPEX و OPEX)</li>
+                        <li>تصميم بنية رقمية محايدة تقنياً</li>
+                        <li>خارطة طريق للتحول والأتمتة وجاهزية الذكاء الاصطناعي</li>
+                        <li>تحديد المبادرات حسب القيمة والجاهزية وسهولة التنفيذ</li>
                     </ul>
                 </div>
 
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-icon">3</div>
+                        <div class="step-icon">٣</div>
                         <h4>دعم التنفيذ</h4>
                     </div>
                     <ul>
-                        <li>اختيار الموردين والإشراف على التنفيذ</li>
-                        <li>إدارة التغيير والتدريب</li>
-                        <li>إنشاء مؤشرات الأداء (KPIs) والحوكمة</li>
+                        <li>دعم اختيار الموردين ومراجعة الحلول التقنية</li>
+                        <li>إدارة التغيير ورفع مهارات العاملين</li>
+                        <li>إنشاء مؤشرات الأداء والحوكمة التشغيلية</li>
                     </ul>
                 </div>
 
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-icon">4</div>
+                        <div class="step-icon">٤</div>
                         <h4>المراقبة والتحسين</h4>
                     </div>
                     <ul>
-                        <li>إعادة تقييم النضج بشكل دوري</li>
-                        <li>تدقيق التنفيذ</li>
-                        <li>دورات التحسين المستمر</li>
+                        <li>متابعة مؤشرات الإنتاجية والتوقفات والجودة</li>
+                        <li>مراجعة تقدم التنفيذ والتحقق من الأثر</li>
+                        <li>تحسين مستمر وإعادة تقييم النضج عند الحاجة</li>
                     </ul>
                 </div>
 
@@ -774,28 +978,28 @@
         </div>
     </section>
 
-    <section class="v2030">
-        <div class="container v2030-layout animate-on-scroll">
+    <section class="v٢٠٣٠">
+        <div class="container v٢٠٣٠-layout animate-on-scroll">
             <div style="flex: 1;">
-                <h2>المواءمة مع رؤية المملكة 2030</h2>
-                <p>تدعم ديجي لينك بشكل مباشر ركائز التحول الصناعي في الرؤية. تساعد خدماتنا المصانع في الوصول إلى البرامج الحكومية والتمويل من خلال توفير تقييمات منظمة وخطط تنفيذية.</p>
-                <ul class="v2030-list">
+                <h2>المواءمة مع رؤية المملكة ٢٠٣٠</h2>
+                <p>تدعم ديجي لينك ركائز التحول الصناعي في الرؤية من خلال رفع الإنتاجية، توطين التقنيات المتقدمة، تحسين كفاءة التشغيل، تطوير مهارات القوى العاملة، وتعزيز جاهزية المصانع السعودية للمنافسة في اقتصاد صناعي قائم على البيانات والذكاء الاصطناعي.</p>
+                <ul class="v٢٠٣٠-list">
                     <li><i class="fas fa-check"></i> تعزيز الإنتاجية والكفاءة التشغيلية</li>
                     <li><i class="fas fa-check"></i> توطين التقنيات المتقدمة</li>
-                    <li><i class="fas fa-check"></i> دعم المصانع الصغيرة والمتوسطة في الثورة الصناعية الرابعة</li>
+                    <li><i class="fas fa-check"></i> دعم المصانع الصغيرة والمتوسطة في الرقمنة والذكاء الاصطناعي</li>
                     <li><i class="fas fa-check"></i> رفع التنافسية الوطنية</li>
                     <li><i class="fas fa-check"></i> تقليل الهدر وتحسين الاستدامة</li>
-                    <li><i class="fas fa-check"></i> زيادة جاهزية التصدير</li>
+                    <li><i class="fas fa-check"></i> تقليل الاعتماد على الأعمال اليدوية المتكررة</li>
                 </ul>
             </div>
-            <img src="vision.jpg" alt="Saudi Vision 2030" class="v2030-img">
+            <img src="vision.jpg" alt="Saudi Vision ٢٠٣٠" class="v٢٠٣٠-img">
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="contact-info">
             <h2>معلومات التواصل</h2>
-            <p style="margin-bottom: 30px;">هل أنت مستعد لبدء رحلة التحول؟ تواصل مع فريقنا المعتمد في تقييمات SIRI و AIMRI اليوم.</p>
+            <p style="margin-bottom: 30px;">هل أنت مستعد لبناء مصنع أكثر ذكاءً وإنتاجية؟ تواصل مع فريقنا المعتمد في تقييمات SIRI و AIMRI وخطط التحول الرقمي والذكاء الاصطناعي.</p>
             <p><strong><i class="fas fa-envelope"></i> البريد الإلكتروني:</strong> info@digilink.sa</p>
             
             <p><strong><i class="fas fa-phone"></i> الجوال:</strong> <span dir="ltr" style="font-family: sans-serif;">+٩٦٦ ٥٠ ٠٣٣ ٤٦٦٤</span></p>
@@ -819,12 +1023,14 @@
                 
                 <select id="service" class="form-field" required>
                     <option value="">اختر الخدمة المطلوبة...</option>
+                    <option value="Future Factory Digitalization and AI Roadmap">خارطة التحول الرقمي والذكاء الاصطناعي لمصنع المستقبل</option>
                     <option value="SIRI Assessment">تقييم SIRI</option>
                     <option value="AIMRI Assessment">تقييم AIMRI</option>
                     <option value="Combined SIRI and AIMRI Assessment">تقييم SIRI و AIMRI معاً</option>
-                    <option value="Feasibility Study">دراسة جدوى</option>
+                    <option value="Automation and Workforce Upskilling">الأتمتة ورفع مهارات القوى العاملة</option>
+                    <option value="Reliability and Asset Management">الاعتمادية وإدارة الأصول</option>
                     <option value="Digital Transformation">استراتيجية التحول الرقمي</option>
-                    <option value="Asset Management">إدارة الأصول</option>
+                    <option value="Feasibility Study">دراسة جدوى</option>
                     <option value="General Inquiry">استفسار عام</option>
                 </select>
                 
@@ -836,7 +1042,7 @@
 
     <footer>
         <div class="container">
-            <p>جميع الحقوق محفوظة © 2026 ديجي لينك للاستشارات.</p>
+            <p>جميع الحقوق محفوظة © ٢٠٢٦ ديجي لينك للاستشارات. مصانع أذكى. أثر قابل للقياس.</p>
             <p>ISO 9001:2015 | ISO/IEC 20000-1:2018 | ISO 45001:2018 معتمدة</p>
         </div>
     </footer>
