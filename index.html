@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiLink | ISO-Certified Industrial Consulting, SIRI & AIMRI Assessment</title>
+    <title>DigiLink | Future Factory Digitalization, SIRI & AIMRI Assessment</title>
+    <meta name="description" content="DigiLink helps Saudi factories improve digital maturity, AI readiness, automation, reliability, and workforce productivity through SIRI, AIMRI, and practical transformation roadmaps.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,6 +245,113 @@
             text-decoration: underline;
         }
 
+
+        /* Future Factory Transformation */
+        .hero-proof {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin: 26px 0 36px;
+        }
+
+        .proof-pill {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            padding: 10px 14px;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .neutrality-note {
+            max-width: 860px;
+            margin: 18px auto 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .future-factory {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .future-intro {
+            text-align: center;
+            max-width: 950px;
+            margin: 0 auto 45px;
+        }
+
+        .future-intro p {
+            font-size: 1.08rem;
+            color: #555;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 35px;
+        }
+
+        .transformation-card {
+            background: var(--brand-light);
+            border-radius: 10px;
+            padding: 28px;
+            border: 1px solid #e9ecef;
+            min-height: 250px;
+        }
+
+        .transformation-card i {
+            color: var(--brand-green);
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+
+        .transformation-card h3 {
+            margin-top: 0;
+            font-size: 1.05rem;
+        }
+
+        .outcome-strip {
+            margin-top: 45px;
+            background: var(--brand-dark);
+            color: #fff;
+            border-radius: 12px;
+            padding: 34px;
+        }
+
+        .outcome-strip h3 {
+            color: #fff;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .outcome-item {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            padding: 18px;
+            text-align: center;
+            font-size: 0.92rem;
+        }
+
+        .methodology-note {
+            margin-top: 35px;
+            background: rgba(58, 125, 66, 0.1);
+            border-left: 5px solid var(--brand-green);
+            padding: 24px;
+            border-radius: 8px;
+        }
+
+
         /* --- 4. SECTIONS & GRIDS --- */
         .partners { padding: 50px 0; background: #fff; text-align: center; }
         .logo-grid { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
@@ -432,6 +540,8 @@
             .service-container, 
             .assessment-grid,
             .certifications-grid,
+            .transformation-grid,
+            .outcome-grid,
             .process-steps, 
             .contact, 
             .v2030-layout,
@@ -467,6 +577,7 @@
 
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#future-factory" onclick="toggleMenu()">Future Factory</a></li>
                     <li><a href="#why" onclick="toggleMenu()">Why DigiLink</a></li>
                     <li><a href="#services" onclick="toggleMenu()">Services</a></li>
                     <li><a href="#assessments" onclick="toggleMenu()">Assessments</a></li>
@@ -481,18 +592,24 @@
 
     <section class="hero">
         <div class="container hero-text animate-on-scroll">
-            <h1>TRANSFORMATION <br>WITH REAL IMPACT</h1>
-            <p>Enabling Saudi factories to achieve world-class digital, AI, and operational maturity through data-driven consulting.</p>
+            <h1>SMARTER FACTORIES.<br>MEASURABLE IMPACT.</h1>
+            <p>DigiLink helps Saudi factories raise digital maturity, become AI-ready, automate repetitive manual work, and improve operational performance through SIRI, AIMRI, reliability improvement, and practical transformation roadmaps.</p>
+            <div class="hero-proof">
+                <span class="proof-pill"><i class="fas fa-certificate"></i> Certified SIRI & AIMRI Capability</span>
+                <span class="proof-pill"><i class="fas fa-industry"></i> 27+ Years Industrial Experience</span>
+                <span class="proof-pill"><i class="fas fa-robot"></i> Automation & AI Readiness</span>
+                <span class="proof-pill"><i class="fas fa-shield-alt"></i> ISO-Certified Management Systems</span>
+            </div>
             <div class="hero-actions">
-                <a href="#contact" class="btn-primary">Book an Assessment</a>
-                <a href="#assessments" class="btn-secondary">Explore SIRI & AIMRI</a>
+                <a href="#contact" class="btn-primary">Book a Transformation Discussion</a>
+                <a href="#future-factory" class="btn-secondary">Explore Future Factory Readiness</a>
             </div>
         </div>
     </section>
 
     <div class="partners animate-on-scroll">
         <div class="container">
-            <p>Supported Technology Ecosystems</p>
+            <p>Technology-Neutral Advisory Across Leading Industrial Ecosystems</p>
             <div class="logo-grid">
                 <img src="odoo.png" alt="Odoo" class="partner-img">
                 <img src="Sap.png" alt="SAP" class="partner-img">
@@ -501,6 +618,7 @@
                 <img src="Oracle.png" alt="Oracle" class="partner-img">
                 <img src="zoho.png" alt="ZOHO" class="partner-img">
             </div>
+            <p class="neutrality-note">DigiLink is not locked into one software platform. We assess the factory first, then help define the right mix of ERP, MES, CMMS, IIoT, analytics, automation, or process improvement based on business value and operational readiness.</p>
         </div>
     </div>
 
@@ -509,17 +627,79 @@
             <div>
                 <h4>Company Overview</h4>
                 <h2>SAUDI-BASED INDUSTRIAL CONSULTING</h2>
-                <p>DigiLink is a specialized firm focusing on manufacturing performance, digital transformation, AI readiness, and Industry 4.0 strategy. With over 27 years of experience, we support factories across the Kingdom in improving operational performance, preparing for practical AI adoption, and aligning with national objectives.</p>
+                <p>DigiLink is a specialized Saudi industrial consulting firm focused on manufacturing performance, digitalization, AI readiness, automation planning, and Industry 4.0 strategy. With over 27 years of hands-on experience in manufacturing, maintenance, and reliability, we help factories improve productivity, reduce dependency on repetitive low-skill activities, strengthen data visibility, and build practical transformation roadmaps aligned with Saudi industrial competitiveness.</p>
             </div>
             <div>
                 <div class="vision-box">
                     <h3><i class="fas fa-eye"></i> OUR VISION</h3>
-                    <p>To be the leading partner enabling Saudi factories to achieve world-class digital maturity and sustainable operational excellence.</p>
+                    <p>To be a leading Saudi partner enabling factories to become smarter, more productive, AI-ready, and less dependent on repetitive manual work.</p>
                 </div>
                 <div class="vision-box">
                     <h3><i class="fas fa-bullseye"></i> OUR MISSION</h3>
-                    <p>To provide Saudi industries with reliable, data-driven consulting services that accelerate Industry 4.0 readiness, AI maturity, and measurable operational impact.</p>
+                    <p>To provide Saudi industries with reliable, data-driven consulting services that convert digitalization, automation, AI readiness, and reliability improvement into measurable operational impact.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="future-factory" class="future-factory">
+        <div class="container animate-on-scroll">
+            <div class="future-intro">
+                <h2>Future Factory Digitalization & AI Readiness</h2>
+                <p>The objective is to build a smarter factory: higher digital maturity, practical AI readiness, automated repetitive work, better machine visibility, stronger reliability, and a workforce focused on supervision, analysis, and improvement rather than manual follow-up.</p>
+            </div>
+
+            <div class="transformation-grid">
+                <div class="transformation-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Digital Operations Visibility</h3>
+                    <p>Convert manual follow-up, paper records, and disconnected spreadsheets into reliable digital workflows, production dashboards, quality records, and real-time operational visibility.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Readiness Before AI Adoption</h3>
+                    <p>Assess whether strategy, data quality, system integration, governance, skills, and use cases are ready before investing in AI dashboards, predictive models, or advanced analytics.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Automation of Repetitive Work</h3>
+                    <p>Identify repetitive, low-skill, and error-prone activities that can be improved through automation, digital workflows, barcode/RFID, machine connectivity, or smart inspection.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Reliability & Downtime Reduction</h3>
+                    <p>Link transformation initiatives to asset performance, preventive maintenance discipline, downtime analysis, spare parts visibility, and stronger coordination between production and maintenance.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Workforce Upskilling</h3>
+                    <p>Shift the workforce from manual recording and reactive follow-up toward system-based execution, equipment monitoring, problem solving, data interpretation, and continuous improvement.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <i class="fas fa-route"></i>
+                    <h3>Practical Transformation Roadmap</h3>
+                    <p>Prioritize initiatives by operational value, readiness, complexity, cost, dependencies, and expected impact — avoiding technology investments that the factory is not ready to absorb.</p>
+                </div>
+            </div>
+
+            <div class="outcome-strip">
+                <h3>Transformation outcomes DigiLink focuses on</h3>
+                <div class="outcome-grid">
+                    <div class="outcome-item">Higher productivity and line utilization</div>
+                    <div class="outcome-item">Reduced repetitive manual work</div>
+                    <div class="outcome-item">Better downtime and quality visibility</div>
+                    <div class="outcome-item">Improved data readiness for AI</div>
+                    <div class="outcome-item">Clearer KPIs and execution governance</div>
+                </div>
+            </div>
+
+            <div class="methodology-note">
+                <strong>Our principle:</strong> DigiLink starts from factory performance, not from software. We first understand production losses, maintenance gaps, manual activities, data quality, and maturity level. Then we define the right digital, automation, and AI roadmap.
             </div>
         </div>
     </section>
@@ -529,19 +709,34 @@
             <h2 style="text-align: center;">Why DigiLink?</h2>
             <div class="features-grid">
                 <div class="feature-card">
+                    <i class="fas fa-balance-scale feature-icon"></i>
+                    <h3>Technology-Neutral Advisory</h3>
+                    <p>We do not start by selling a specific platform. We assess the factory's maturity, process gaps, manual work, and data readiness before recommending ERP, MES, CMMS, IIoT, analytics, automation, or process redesign.</p>
+                </div>
+                <div class="feature-card">
                     <i class="fas fa-certificate feature-icon"></i>
-                    <h3>Certified Assessors & ISO-Certified Systems</h3>
-                    <p>DigiLink combines certified SIRI and AIMRI assessment capability with ISO-certified management systems covering quality, IT service management, and occupational health and safety. This gives clients stronger confidence in the structure, reliability, and professionalism of our consulting delivery.</p>
+                    <h3>SIRI + AIMRI Capability</h3>
+                    <p>DigiLink combines smart industry readiness with AI maturity readiness, helping factories understand whether their processes, systems, data, people, and governance are ready for practical AI adoption.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-industry feature-icon"></i>
-                    <h3>Deep Local Expertise</h3>
-                    <p>With 27+ years in manufacturing, maintenance, and reliability, we deploy methodologies optimized for Saudi factories—especially small to mid-size plants (SMEs) seeking cost-effective maturity improvements.</p>
+                    <h3>Deep Industrial Experience</h3>
+                    <p>With 27+ years in manufacturing, maintenance, and reliability, our work is grounded in real factory challenges: downtime, planning gaps, manual tracking, quality losses, weak data, and underutilized equipment.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-project-diagram feature-icon"></i>
-                    <h3>End-to-End Support</h3>
-                    <p>We provide full Digital Transformation Support, from initial assessment to feasibility analysis, roadmap design, implementation support, and progress tracking.</p>
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>From Assessment to Measurable Impact</h3>
+                    <p>We convert assessment findings into prioritized initiatives, KPIs, implementation governance, and operational outcomes such as productivity improvement, downtime reduction, and better decision visibility.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tools feature-icon"></i>
+                    <h3>Reliability & Maintenance Focus</h3>
+                    <p>Digital transformation is linked to asset performance, preventive maintenance, spare parts visibility, root-cause analysis, and stronger coordination between production and maintenance teams.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>ISO-Certified Delivery Discipline</h3>
+                    <p>DigiLink operates under certified management systems covering quality, IT service management, and occupational health and safety, supporting structured and professional consulting delivery.</p>
                 </div>
             </div>
         </div>
@@ -613,7 +808,7 @@
                         <ul>
                             <li>Establishing new factories</li>
                             <li>Upgrading existing production lines</li>
-                            <li>Financial modeling for government funding</li>
+                            <li>Business case, CAPEX/OPEX, and investment prioritization</li>
                         </ul>
                     </div>
                 </div>
@@ -635,18 +830,18 @@
                         <ul>
                             <li>AI maturity and readiness evaluation</li>
                             <li>Data, governance, people, and technology review</li>
-                            <li>AI use-case prioritization and practical roadmap</li>
+                            <li>AI use-case prioritization, data readiness, and practical roadmap</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-item">
                     <div class="service-graphic"><i class="fas fa-network-wired"></i></div>
                     <div class="service-content">
-                        <h3>Digital Transformation</h3>
+                        <h3>Digital Transformation & Automation</h3>
                         <ul>
-                            <li>Technology architecture blueprints</li>
-                            <li>CAPEX and OPEX planning</li>
-                            <li>Integration Strategy (ERP, IoT, MES)</li>
+                            <li>Digital workflows, dashboards, and factory visibility</li>
+                            <li>Automation opportunities for repetitive manual work</li>
+                            <li>Integration strategy across ERP, MES, CMMS, IIoT, and analytics</li>
                         </ul>
                     </div>
                 </div>
@@ -661,6 +856,17 @@
                         </ul>
                     </div>
                 </div>
+                <div class="service-item">
+                    <div class="service-graphic"><i class="fas fa-route"></i></div>
+                    <div class="service-content">
+                        <h3>Future Factory Roadmap</h3>
+                        <ul>
+                            <li>Current vs. target digital and AI maturity</li>
+                            <li>Prioritized initiatives by value, readiness, and complexity</li>
+                            <li>Execution governance, KPI tracking, and change enablement</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -669,19 +875,19 @@
         <div class="container animate-on-scroll">
             <div class="assessment-intro">
                 <h2>Book an Assessment</h2>
-                <p>DigiLink helps industrial companies understand where they stand today, define a realistic target maturity level, and convert assessment findings into practical transformation actions.</p>
+                <p>DigiLink helps industrial companies understand where they stand today, define a realistic target maturity level, and convert assessment findings into digitalization, automation, AI readiness, workforce upskilling, and operational improvement actions.</p>
             </div>
             <div class="assessment-grid">
                 <div class="assessment-card">
                     <div>
                         <span class="assessment-badge">Smart Industry Readiness</span>
                         <h3>SIRI Assessment</h3>
-                        <p>A structured assessment for factories seeking to improve Industry 4.0 readiness across process, technology, and organization dimensions.</p>
+                        <p>A structured assessment for factories seeking to improve Industry 4.0 readiness, operational visibility, automation maturity, and digital integration across process, technology, and organization dimensions.</p>
                         <ul>
                             <li>Current maturity scoring and gap analysis</li>
                             <li>Review across core smart manufacturing dimensions</li>
                             <li>Transformation roadmap with prioritized initiatives</li>
-                            <li>Support for investment planning and execution alignment</li>
+                            <li>Operational roadmap focused on productivity, visibility, automation, and implementation alignment</li>
                         </ul>
                     </div>
                     <a class="assessment-link" href="mailto:info@digilink.sa?subject=Book%20SIRI%20Assessment&body=Hello%20DigiLink,%0D%0A%0D%0AI%20would%20like%20to%20book%20a%20SIRI%20Assessment.%0D%0A%0D%0ACompany:%0D%0AContact%20Name:%0D%0APhone:%0D%0AFactory%20Location:%0D%0A">Book SIRI Assessment <i class="fas fa-arrow-right"></i></a>
@@ -724,7 +930,7 @@
     <section id="approach" class="approach">
         <div class="container animate-on-scroll">
             <h2>Our Approach</h2>
-            <p>A structured 4-Phase Transformation Cycle</p>
+            <p>A structured 4-Phase Transformation Cycle focused on maturity, automation, AI readiness, and measurable operational impact.</p>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-header"><div class="step-icon">1</div><h4>Diagnostic</h4></div>
@@ -738,7 +944,7 @@
                     <div class="step-header"><div class="step-icon">2</div><h4>Strategy</h4></div>
                     <ul>
                         <li>Target maturity definition</li>
-                        <li>Technology and AI readiness blueprint</li>
+                        <li>Technology, automation, and AI readiness blueprint</li>
                         <li>Transformation roadmap</li>
                     </ul>
                 </div>
@@ -746,8 +952,8 @@
                     <div class="step-header"><div class="step-icon">3</div><h4>Execution</h4></div>
                     <ul>
                         <li>Vendor selection oversight</li>
-                        <li>Change management & training</li>
-                        <li>KPI creation</li>
+                        <li>Workforce upskilling and change management</li>
+                        <li>KPI creation for productivity, downtime, quality, manual work, and data readiness</li>
                     </ul>
                 </div>
                 <div class="step">
@@ -771,6 +977,7 @@
                     <li><i class="fas fa-check"></i> Enhancing productivity and efficiency</li>
                     <li><i class="fas fa-check"></i> Localizing advanced technologies</li>
                     <li><i class="fas fa-check"></i> Supporting SMEs in Industry 4.0 and AI readiness</li>
+                    <li><i class="fas fa-check"></i> Reducing dependency on repetitive manual work</li>
                     <li><i class="fas fa-check"></i> Raising national competitiveness</li>
                     <li><i class="fas fa-check"></i> Reducing waste & sustainability</li>
                     <li><i class="fas fa-check"></i> Increasing export readiness</li>
@@ -783,7 +990,7 @@
     <section id="contact" class="contact">
         <div class="contact-info">
             <h2>Contact Information</h2>
-            <p style="margin-bottom: 30px;">Ready to start your transformation? Contact our certified SIRI and AIMRI assessment team today.</p>
+            <p style="margin-bottom: 30px;">Ready to improve digital maturity, AI readiness, automation, and operational performance? Contact our certified SIRI and AIMRI assessment team today.</p>
             
             <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@digilink.sa</p>
             <p><strong><i class="fas fa-phone"></i> Mobile:</strong> +966 50 033 4664</p>
@@ -808,6 +1015,8 @@
                     <option value="SIRI Assessment">SIRI Assessment</option>
                     <option value="AIMRI Assessment">AIMRI Assessment</option>
                     <option value="Combined SIRI and AIMRI Assessment">Combined SIRI and AIMRI Assessment</option>
+                    <option value="Future Factory Digitalization and AI Roadmap">Future Factory Digitalization and AI Roadmap</option>
+                    <option value="Automation and Workforce Upskilling">Automation and Workforce Upskilling</option>
                     <option value="Feasibility Study">Feasibility Study</option>
                     <option value="Digital Transformation">Digital Transformation Strategy</option>
                     <option value="Asset Management">Asset Management</option>
@@ -821,7 +1030,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 DigiLink Consulting. Transformation with Real Impact.</p>
+            <p>&copy; 2026 DigiLink Consulting. Smarter Factories. Measurable Impact.</p>
             <p>ISO 9001:2015 | ISO/IEC 20000-1:2018 | ISO 45001:2018 Certified</p>
         </div>
     </footer>
