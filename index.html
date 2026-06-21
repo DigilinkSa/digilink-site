@@ -731,6 +731,129 @@
 
         footer { background: #111; color: #666; padding: 30px; text-align: center; font-size: 13px; }
 
+
+        /* WhatsApp Floating Popup */
+        .whatsapp-widget {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 1200;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .whatsapp-popup {
+            width: 315px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.22);
+            overflow: hidden;
+            margin-bottom: 14px;
+            display: none;
+            transform-origin: bottom right;
+            animation: whatsappPop 0.25s ease-out;
+        }
+
+        .whatsapp-popup.active {
+            display: block;
+        }
+
+        @keyframes whatsappPop {
+            from { opacity: 0; transform: translateY(12px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .whatsapp-popup-header {
+            background: #25D366;
+            color: var(--white);
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .whatsapp-popup-header strong {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .whatsapp-popup-header span {
+            display: block;
+            font-size: 0.82rem;
+            opacity: 0.92;
+            margin-top: 2px;
+        }
+
+        .whatsapp-close {
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .whatsapp-popup-body {
+            padding: 18px;
+            color: #444;
+        }
+
+        .whatsapp-message-preview {
+            background: var(--brand-light);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 16px;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .whatsapp-start-chat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: var(--white);
+            text-decoration: none;
+            padding: 13px 16px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .whatsapp-start-chat:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
+        }
+
+        .whatsapp-float-button {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            border: none;
+            background: #25D366;
+            color: var(--white);
+            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 31px;
+            cursor: pointer;
+            margin-left: auto;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .whatsapp-float-button:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.48);
+        }
+
+
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 900px) {
             .hamburger { display: block; }
@@ -750,6 +873,23 @@
             }
 
             .nav-menu.active { display: flex; }
+
+            .whatsapp-widget {
+                right: 16px;
+                bottom: 16px;
+            }
+
+            .whatsapp-popup {
+                width: calc(100vw - 32px);
+                max-width: 330px;
+            }
+
+            .whatsapp-float-button {
+                width: 56px;
+                height: 56px;
+                font-size: 28px;
+            }
+
 
             .split-layout, 
             .features-grid, 
@@ -1335,6 +1475,7 @@
             
             <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@digilink.sa</p>
             <p><strong><i class="fas fa-phone"></i> Mobile:</strong> +966 50 033 4664</p>
+            <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> <a href="https://wa.me/966500334664" target="_blank" style="color: white; text-decoration: underline; margin-left: 5px;">+966 50 033 4664</a></p>
             <p><strong><i class="fas fa-phone-alt"></i> Landline:</strong> +966 13 344 7000</p>
             
             <p><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> 
@@ -1372,6 +1513,38 @@
         </div>
     </section>
 
+
+    <!-- WhatsApp Floating Popup -->
+    <div class="whatsapp-widget" aria-label="WhatsApp contact widget">
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="whatsapp-popup-header">
+                <div>
+                    <strong>DigiLink WhatsApp</strong>
+                    <span>Usually replies during business hours</span>
+                </div>
+                <button class="whatsapp-close" type="button" aria-label="Close WhatsApp popup" onclick="toggleWhatsAppPopup(false)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="whatsapp-popup-body">
+                <div class="whatsapp-message-preview">
+                    Hello, I would like to discuss a DigiLink service or book an assessment.
+                </div>
+                <a class="whatsapp-start-chat"
+                   href="https://wa.me/966500334664?text=Hello%20DigiLink%2C%20I%20would%20like%20to%20discuss%20a%20service%20or%20book%20an%20assessment."
+                   target="_blank"
+                   rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Start WhatsApp Chat
+                </a>
+            </div>
+        </div>
+
+        <button class="whatsapp-float-button" type="button" aria-label="Open WhatsApp chat" onclick="toggleWhatsAppPopup()">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+
     <footer>
         <div class="container">
             <p>&copy; 2026 DigiLink Consulting. Smarter Factories. Measurable Impact.</p>
@@ -1397,6 +1570,29 @@
 
             const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
             elementsToAnimate.forEach(el => observer.observe(el));
+        });
+
+
+        function toggleWhatsAppPopup(forceState) {
+            const popup = document.getElementById('whatsappPopup');
+            if (!popup) return;
+
+            const shouldOpen = typeof forceState === 'boolean'
+                ? forceState
+                : !popup.classList.contains('active');
+
+            popup.classList.toggle('active', shouldOpen);
+        }
+
+        document.addEventListener('click', function(event) {
+            const widget = document.querySelector('.whatsapp-widget');
+            const popup = document.getElementById('whatsappPopup');
+
+            if (!widget || !popup) return;
+
+            if (!widget.contains(event.target)) {
+                popup.classList.remove('active');
+            }
         });
 
         function sendEmail(event) {
