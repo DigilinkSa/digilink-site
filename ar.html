@@ -715,6 +715,130 @@
 
         footer { background: #111; color: #666; padding: 30px; text-align: center; font-size: 13px; }
 
+
+        /* WhatsApp Floating Popup - Arabic RTL */
+        .whatsapp-widget {
+            position: fixed;
+            left: 24px;
+            bottom: 24px;
+            z-index: 1200;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .whatsapp-popup {
+            width: 315px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.22);
+            overflow: hidden;
+            margin-bottom: 14px;
+            display: none;
+            transform-origin: bottom left;
+            animation: whatsappPop 0.25s ease-out;
+        }
+
+        .whatsapp-popup.active {
+            display: block;
+        }
+
+        @keyframes whatsappPop {
+            from { opacity: 0; transform: translateY(12px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .whatsapp-popup-header {
+            background: #25D366;
+            color: var(--white);
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .whatsapp-popup-header strong {
+            display: block;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+        }
+
+        .whatsapp-popup-header span {
+            display: block;
+            font-size: 0.86rem;
+            opacity: 0.92;
+            margin-top: 2px;
+        }
+
+        .whatsapp-close {
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .whatsapp-popup-body {
+            padding: 18px;
+            color: #444;
+        }
+
+        .whatsapp-message-preview {
+            background: var(--brand-light);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .whatsapp-start-chat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: var(--white);
+            text-decoration: none;
+            padding: 13px 16px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .whatsapp-start-chat:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
+        }
+
+        .whatsapp-float-button {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            border: none;
+            background: #25D366;
+            color: var(--white);
+            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 31px;
+            cursor: pointer;
+            margin-right: auto;
+            margin-left: 0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .whatsapp-float-button:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.48);
+        }
+
         /* --- MOBILE RESPONSIVENESS FIXES (RTL) --- */
         @media (max-width: 900px) {
             /* 1. Show Hamburger */
@@ -737,6 +861,23 @@
 
             .nav-menu.active {
                 display: flex;
+            }
+
+
+            .whatsapp-widget {
+                left: 16px;
+                bottom: 16px;
+            }
+
+            .whatsapp-popup {
+                width: calc(100vw - 32px);
+                max-width: 330px;
+            }
+
+            .whatsapp-float-button {
+                width: 56px;
+                height: 56px;
+                font-size: 28px;
             }
 
             /* 3. Fix Grids to Single Column */
@@ -1324,6 +1465,11 @@
             <p><strong><i class="fas fa-envelope"></i> البريد الإلكتروني:</strong> info@digilink.sa</p>
             
             <p><strong><i class="fas fa-phone"></i> الجوال:</strong> <span dir="ltr" style="font-family: sans-serif;">+٩٦٦ ٥٠ ٠٣٣ ٤٦٦٤</span></p>
+            <p><strong><i class="fab fa-whatsapp"></i> واتساب:</strong> 
+                <a href="https://wa.me/966500334664?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AF%D9%8A%D8%AC%D9%8A%20%D9%84%D9%8A%D9%86%D9%83%D8%8C%20%D8%A3%D9%88%D8%AF%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%88%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85." target="_blank" rel="noopener" style="color: white; text-decoration: underline; margin-right: 5px;">
+                    <span dir="ltr" style="font-family: sans-serif;">+٩٦٦ ٥٠ ٠٣٣ ٤٦٦٤</span>
+                </a>
+            </p>
             <p><strong><i class="fas fa-phone-alt"></i> الهاتف الثابت:</strong> <span dir="ltr" style="font-family: sans-serif;">+٩٦٦ ١٣ ٣٤٤ ٧٠٠٠</span></p>
             
             <p><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> 
@@ -1363,6 +1509,37 @@
         </div>
     </section>
 
+
+    <!-- WhatsApp Floating Popup -->
+    <div class="whatsapp-widget" aria-label="أداة التواصل عبر واتساب">
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="whatsapp-popup-header">
+                <div>
+                    <strong>واتساب ديجي لينك</strong>
+                    <span>نرد عادة خلال أوقات العمل</span>
+                </div>
+                <button class="whatsapp-close" type="button" aria-label="إغلاق نافذة واتساب" onclick="toggleWhatsAppPopup(false)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="whatsapp-popup-body">
+                <div class="whatsapp-message-preview">
+                    مرحباً، أود مناقشة خدمة من ديجي لينك أو حجز تقييم.
+                </div>
+                <a class="whatsapp-start-chat"
+                   href="https://wa.me/966500334664?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AF%D9%8A%D8%AC%D9%8A%20%D9%84%D9%8A%D9%86%D9%83%D8%8C%20%D8%A3%D9%88%D8%AF%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%88%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85."
+                   target="_blank"
+                   rel="noopener">
+                    <i class="fab fa-whatsapp"></i> ابدأ المحادثة عبر واتساب
+                </a>
+            </div>
+        </div>
+
+        <button class="whatsapp-float-button" type="button" aria-label="فتح محادثة واتساب" onclick="toggleWhatsAppPopup()">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
     <footer>
         <div class="container">
             <p>جميع الحقوق محفوظة © ٢٠٢٦ ديجي لينك للاستشارات. مصانع أذكى. أثر قابل للقياس.</p>
@@ -1393,7 +1570,37 @@
             menu.classList.toggle("active");
         }
 
-        // 3. Automated Email Subject Generator
+
+        // 3. WhatsApp Popup Toggle
+        function toggleWhatsAppPopup(forceState) {
+            const popup = document.getElementById('whatsappPopup');
+            if (!popup) return;
+
+            const shouldOpen = typeof forceState === 'boolean'
+                ? forceState
+                : !popup.classList.contains('active');
+
+            popup.classList.toggle('active', shouldOpen);
+        }
+
+        document.addEventListener('click', function(event) {
+            const widget = document.querySelector('.whatsapp-widget');
+            const popup = document.getElementById('whatsappPopup');
+
+            if (!widget || !popup) return;
+
+            if (!widget.contains(event.target)) {
+                popup.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                toggleWhatsAppPopup(false);
+            }
+        });
+
+        // 4. Automated Email Subject Generator
         function sendEmail(event) {
             event.preventDefault(); 
 
