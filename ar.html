@@ -632,7 +632,24 @@
         /* --- 5. SECTIONS & GRIDS --- */
         .partners { padding: 50px 0; background: #fff; text-align: center; }
         .logo-grid { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .partner-img { height: 40px; max-width: 120px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; }
+       /* Partners logos - grayscale by default, colorful on hover */
+.partner-img {
+    height: 40px;
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(100%) saturate(0%) contrast(0.9);
+    opacity: 0.6;
+    transition: 
+        filter 0.35s ease,
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.partner-img:hover {
+    filter: grayscale(0%) saturate(115%) contrast(1.05);
+    opacity: 1;
+    transform: translateY(-4px) scale(1.08);
+}
 
         .about-section { padding: 80px 0; background: var(--brand-light); }
         .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
