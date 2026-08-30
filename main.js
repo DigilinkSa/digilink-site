@@ -165,7 +165,7 @@ if (enquiryForm) {
 
   const updateWhatsApp = () => {
     const data = new FormData(enquiryForm);
-    const selectedService = serviceSelect.options[serviceSelect.selectedIndex]?.text || '';
+    const selectedService = serviceSelect.value ? (serviceSelect.options[serviceSelect.selectedIndex]?.text || '') : '';
     const lines = [copy.whatsappIntro];
     const values = [
       [copy.labels.name, data.get('name')],
