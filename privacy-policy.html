@@ -202,41 +202,46 @@
 
   </style>
 
+<style>
+.site-header { --green-dark:#2f6f37; --container:1180px; --shadow:0 22px 60px rgba(29,38,42,.12); color:#1d262a; }
+.site-header .container { width:min(1180px,calc(100% - 40px));margin-inline:auto; }
+/* Header */
+.site-header {
+  position: sticky;
+  z-index: 50;
+  top: 0;
+  border-bottom: 1px solid rgba(29, 38, 42, 0.08);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+}
+.nav-wrap { display: flex; min-height: 82px; align-items: center; gap: 30px; }
+.brand { display: inline-flex; flex: 0 0 auto; align-items: center; text-decoration: none; }
+.brand img { width: 178px; height: 58px; object-fit: cover; object-position: center; }
+.site-nav { display: flex; align-items: center; gap: 24px; margin-inline-start: auto; }
+.site-nav a { font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+.site-nav a:hover { color: var(--green); }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.lang-switch { color: var(--green); font-weight: 800; text-decoration: none; }
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+}
+.menu-toggle span { display: block; width: 100%; height: 2px; margin: 5px 0; background: var(--charcoal); }
+
+
+</style>
+<link rel="stylesheet" href="navigation.css">
 </head>
 
 <body>
 
-  <header class="top">
-
-    <div class="wrap top-inner">
-
-      <a href="index.html#top" aria-label="DigiLink home">
-
-        <img src="logo.jpg" alt="DigiLink — Transformation with real impact">
-
-      </a>
-
-      <nav class="legal-nav" aria-label="Primary navigation">
-
-        <a href="index.html#solutions">Solutions</a>
-
-        <a href="index.html#approach">Approach</a>
-
-        <a href="index.html#journey">Journey</a>
-
-        <a href="experience.html">Experience</a>
-
-        <a href="index.html#future-factories">Future Factories</a>
-
-        <a href="index.html#credentials">Credentials</a>
-
-        <a href="contact.html">Contact</a>
-
-      </nav>
-
-    </div>
-
-  </header>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html#top" aria-label="DigiLink home"><img src="logo.jpg" alt="DigiLink"></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" aria-label="Primary navigation"><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Approach</a><a href="index.html#journey">Journey</a><a href="experience.html">Experience</a><a href="index.html#future-factories">Future Factories</a><a href="index.html#credentials">Credentials</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><a class="lang-switch" href="ar.html" lang="ar" aria-label="الصفحة الرئيسية بالعربية">العربية</a></div></div></header>
 
   <main>
 
@@ -340,6 +345,7 @@
 
   </footer>
 
+<script src="main.js"></script>
 </body>
 
 </html>

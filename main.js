@@ -1,6 +1,36 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
 
+// Mark only exact pages or the selected homepage section as current.
+const updateNavigationState = () => {
+  navigation?.querySelectorAll('a').forEach((link) => {
+    const target = new URL(link.href);
+    const currentPath = location.pathname.endsWith('/') ? `${location.pathname}index.html` : location.pathname;
+    const samePage = target.pathname === currentPath;
+    link.removeAttribute('aria-current');
+    if (samePage && (!target.hash || target.hash === location.hash)) {
+      link.setAttribute('aria-current', target.hash ? 'location' : 'page');
+    }
+  });
+};
+updateNavigationState();
+window.addEventListener('hashchange', updateNavigationState);
+
+// Size the approved standalone players from their content without editing them.
+document.querySelectorAll('.journey-player iframe').forEach((frame) => {
+  frame.addEventListener('load', () => {
+    const content = frame.contentDocument?.querySelector('.wrap');
+    if (!content) return;
+    const resize = () => {
+      const bodyStyle = frame.contentWindow.getComputedStyle(frame.contentDocument.body);
+      const height = Math.ceil(content.getBoundingClientRect().height + parseFloat(bodyStyle.paddingTop) + parseFloat(bodyStyle.paddingBottom));
+      frame.parentElement.style.height = `${height}px`;
+    };
+    new ResizeObserver(resize).observe(content);
+    resize();
+  });
+});
+
 if (menuButton && navigation) {
   menuButton.addEventListener('click', () => {
     const isOpen = navigation.classList.toggle('open');

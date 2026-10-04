@@ -1,0 +1,17 @@
+/* Shared navigation layout for both languages and the standalone policy page. */
+.site-header { --charcoal: #1d262a; }
+.site-nav a { white-space: nowrap; }
+.site-nav a[aria-current] { color: var(--green); text-decoration: underline; text-underline-offset: 6px; }
+@media (max-width: 1200px) {
+  .site-header .nav-wrap { min-height: 72px; gap: 16px; }
+  .site-header .brand img { width: 150px; height: 48px; }
+  .site-header .menu-toggle { display: block; margin-inline-start: auto; flex-shrink: 0; }
+  .site-header .site-nav { position: absolute; top: 100%; right: 14px; left: 14px; display: none; align-items: stretch; padding: 16px; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); background: #fff; max-height: calc(100dvh - 90px); overflow-y: auto; }
+  .site-header .site-nav.open { display: grid; }
+  .site-header .site-nav a { padding: 10px; font-size: .82rem; }
+  .site-header .nav-actions { margin-inline-start: 0; }
+}
+@media (max-width: 500px) {
+  .site-header .nav-wrap { gap: 10px; }
+  .site-header .nav-actions .btn { display: none; }
+}
