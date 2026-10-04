@@ -740,3 +740,51 @@ html[dir="rtl"]:has(link[rel="canonical"][href$="reliability-asset-management.ht
   .artifact-item, .artifact-item:nth-child(n) { border-top: 1px solid var(--line); border-inline-end: 0; }
   .artifact-item:first-child { border-top: 0; }
 }
+/* DigiLink Transformation Journey */
+
+.journey-showcase {
+  background: #ffffff;
+}
+
+.journey-showcase-head {
+  max-width: 820px;
+  margin-bottom: 34px;
+}
+
+.journey-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1d262a;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(29, 38, 42, 0.14);
+}
+
+.journey-player iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.journey-showcase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 768px) {
+  .journey-player {
+    border-radius: 12px;
+  }
+
+  .journey-showcase-actions {
+    flex-direction: column;
+  }
+
+  .journey-showcase-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
