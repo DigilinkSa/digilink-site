@@ -753,7 +753,7 @@ html[dir="rtl"]:has(link[rel="canonical"][href$="reliability-asset-management.ht
 
 .journey-player {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: clamp(760px, 68vw, 900px);
   background: #1d262a;
   border-radius: 18px;
   overflow: hidden;
