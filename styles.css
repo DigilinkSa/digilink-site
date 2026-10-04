@@ -788,3 +788,10 @@ html[dir="rtl"]:has(link[rel="canonical"][href$="reliability-asset-management.ht
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .journey-player {
+    height: 72vh;
+    min-height: 620px;
+    border-radius: 12px;
+  }
+}
